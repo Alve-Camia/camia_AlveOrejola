@@ -78,10 +78,10 @@ Else:
 (User) Input: Selects Account settings on main page:
 (Program) Output:
 Program displays the following:
-  • Account Name and Password configuration
+  • Account Name and Password setting
   • Attendance Record History
   • Preferences (e.g, Time Format)
-  • Appearances and Notifications configuration
+  • Appearances and Notifications setting
 
 8.
 (User) Input: Selects to log out
