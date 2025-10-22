@@ -6,15 +6,15 @@ Our project is called the **Self-record Attendance System**. The main reason we 
 
 With our project, we want to make an attendance system that can make things easier and faster. Students will be able to record their own attendance instead of depending on just one person or one scanner. At the same time, the system will have features to avoid cheating, so students can’t just “fake” their attendance.
 
-Some features we plan to add are a log in and log out system, attendance tracker creation/checking, time-based attendance checking, settings, and notifications. The program will also give messages when a user enters something wrong, so it’s clear and easy to use.
+Some features we plan to add are a log in and log out system, attendance tracker creation/checking, time-based attendance checking, settings, and notifications. The program will also give messages when a user enters something wrong, so it’s clear and easy to use. To add on, there will be a feature that allows one to check the report / summary  of their attendance list. This can make the process of reflecting a student's attendance smoother and efficient.  
 
 Our main goals are:
 
-To allow students to record their own attendance. (By classes)
+• To allow students to record their own attendance. (Mainly for classes in different subjects)
 
-To make sure the system checks the inputs and outputs properly so there’s no dishonest recording.
+• To make sure the system checks the inputs and outputs properly so there’s no dishonest recording.
 
-Overall, this project will try to solve the problems of slow and unreliable attendance systems while making the process more fair and organized.
+• Overall, this project will try to solve the problems of slow and unreliable attendance systems while making the process more fair and organized.
 
 ## Features
 • Log in and log out program feature
@@ -23,7 +23,7 @@ Overall, this project will try to solve the problems of slow and unreliable atte
 
 • Current time utulization for checking attendance (This will be part of the second feature / the feature above this text.)
 
-• Attendance Summary and Report
+• Attendance list: Summary / Report
 
 • Settings feature
  
@@ -88,5 +88,5 @@ Session ended.
 If this is a mistake, type Y to go to log in. Otherwise, type anything else to leave: _N_
 
 ## Contributors
-- Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart, README)
-- Student 2: Claire L. Orejola (README: Project Description)
+- Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart)
+- Student 2: Claire L. Orejola (README)
