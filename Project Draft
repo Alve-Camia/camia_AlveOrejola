@@ -2,20 +2,42 @@ Project title: Automated Attendance System
 
 Problem Statement: 
   When it comes to attendance, there is still a use of manual and automated attendance tracking. Though it has reasonable efficiency, issues still arise from it. For attendance involving
-manual tracking, this method of attendance over relies on one or more people to check the attendance. On the other hand, the common automated attendance in the campus (QR) can only focus
-on checking attendance for one student every time, reducing the speed. This is more apparent when it is tracking attendance for a larger 
-number of people such as a batch. 
+manual tracking, this method of attendance over relies on one or more people to check the attendance. On the other hand, the automated attendance in our campus such as the QR scanner/terminal can be considered automated and faster, but one terminal can only accommodate one student at a time. Even if there were multiple terminals, its unsurprising that there would still be lines of students waiting.
+  
   For this automated attendance system project, we will attempt to make an attendance system that addresses the following issues said earlier, ideally by allowing one to record their 
 attendance and send it to the person handling it. However, features will be needed to avoid dishonest attendance recording. That way, the 
-finished project would have less loopholes and prevent academic dishonesty (In this situation, “cheating” on attendance). 
+finished project would have less loopholes and prevent academic dishonesty (In this situation, “cheating” on attendance).
+Notes:
+1. Essentially, the last sentence is saying that we’re trying to avoid a “false positive” in a student’s attendance, specifically those who are recorded as “Present” when they’re actually not.
+
+2. We are intending to add a feature/s such that before you can even record yourself "Present", you would be asked some way to prove you were actually present. Specifically, the attendance would have an assigned password (While making the attedance, the person who's creating would first need to assign it a passowrd.) This password would be the main way to prove your actually present.
+How this would look like for a user point of view (take for examlpe - student):
+While trying to record yourself present, the attendance recorder would ask the user what is the assigned password to this attendance recorder. From this point, the student would not be able to record themselves present unless someone else told them what it was (which is the person who created the attendance such as the teacher). The teacher may disclose this password to students who are present.
+
+It should be noted that this main point wouldn't completely guarantee integrity since the info of the new passwords can still be relayed to those aren't actually present (such as via messenger). To solve this, there may be more parts to fill out (required field) in the attendance to further prove you're present. (The required field may, for example, ask something such that the one who is absent/cutting/not present (in general) can not answer / can answer but its obvious that they didn't get the info themself (Ex: copied someone else's answer) 
+
 
 Project Objectives:
-•	Allow students to record their attendance instead of relying on a single person/object to do so.
+•	Allow students to record their attendance instead of relying on a single person/terminal to do so. (Generally by classes or time(s)/date(s) that aren't durning classes but still require student's attendance such as SALINLAHI 2025)
 •	Consider input/output validation in attendance system to prevent dishonest attendance recording   
+
 Planned Features: 
 • Log in and log out program feature
-•	Option to (create/check, record) an attendance tracker
-•	Current time utulization for checking attendance 
+•	Option to (create/check, record) an attendance
+•	Current time utulization for checking attendance
+Note for 3rd feature:
+1. It will be included in the 2nd feature
+2. Note for 3rd feature: Since you are the one to record your own attendance, the time you do so will be important to check if you're tardy/cutting/absent for a required student attendance and by how long. For when will the attendance consider the user tardy or absent, the one who created it will specify it in their attendance
+As example (only): 
+IF you were late to a class by 14 minutes:
+
+Without Self-record attendance system: 
+You would be marked 14 minutes late in Daily Attendance Sheet
+
+With Self-record attendance system: 
+If you recorded your attendance, the attendance will get the current time to check if your record is past the indicated tary/absent mark. If yes (tardy), your recording will include how long you were tardy for (such as in minutes). If instead the the current time meets the absent mark, your attendance would be marked "Absent".
+
+As example
 •	Settings feature
 • Notifications
 
