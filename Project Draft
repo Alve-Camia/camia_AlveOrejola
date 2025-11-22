@@ -6,25 +6,26 @@ manual tracking, this method of attendance over relies on one or more people to 
   
   For this automated attendance system project, we will attempt to make an attendance system that addresses the following issues said earlier, ideally by allowing one to record their 
 attendance and send it to the person handling it. However, features will be needed to avoid dishonest attendance recording. That way, the 
-finished project would have less loopholes and prevent academic dishonesty (In this situation, “cheating” on attendance).
+finished project would have less loopholes and prevent academic dishonesty
 Notes:
 1. Essentially, the last sentence is saying that we’re trying to avoid a “false positive” in a student’s attendance, specifically those who are recorded as “Present” when they’re actually not.
 
 2. We are intending to add a feature/s such that before you can even record yourself "Present", you would be asked some way to prove you were actually present. Specifically, the attendance would have an assigned password (While making the attedance, the person who's creating would first need to assign it a passowrd.) This password would be the main way to prove your actually present.
+
 How this would look like for a user point of view (take for examlpe - student):
 While trying to record yourself present, the attendance recorder would ask the user what is the assigned password to this attendance recorder. From this point, the student would not be able to record themselves present unless someone else told them what it was (which is the person who created the attendance such as the teacher). The teacher may disclose this password to students who are present.
 
-It should be noted that this main point wouldn't completely guarantee integrity since the info of the new passwords can still be relayed to those aren't actually present (such as via messenger). To solve this, there may be more parts to fill out (required field) in the attendance to further prove you're present. (The required field may, for example, ask something such that the one who is absent/cutting/not present (in general) can not answer / can answer but its obvious that they didn't get the info themself (Ex: copied someone else's answer) 
+It should be noted that this main point wouldn't completely guarantee integrity since the info of the new passwords can still be relayed to those aren't actually present (such as via messenger). To solve this, the self-record attendance will ask the user to submit something that allows it to countercheck their attendance (such as an image of them at the area)
 
 
 Project Objectives:
 •	Allow students to record their attendance instead of relying on a single person/terminal to do so. (Generally by classes or time(s)/date(s) that aren't durning classes but still require student's attendance such as SALINLAHI 2025)
-•	Consider input/output validation in attendance system to prevent dishonest attendance recording   
+•	Consider input/output validation in attendance system to prevent dishonest attendance recording (Data Integrity)
 
 Planned Features: 
 • Log in and log out program feature
 •	Option to (create/check, record) an attendance
-•	Current time utulization for checking attendance
+•	Current time utilization for checking attendance
 •	Settings feature
 
 Note for 3rd feature:
