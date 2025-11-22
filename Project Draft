@@ -25,6 +25,8 @@ Planned Features:
 • Log in and log out program feature
 •	Option to (create/check, record) an attendance
 •	Current time utulization for checking attendance
+•	Settings feature
+
 Note for 3rd feature:
 1. It will be included in the 2nd feature
 2. Note for 3rd feature: Since you are the one to record your own attendance, the time you do so will be important to check if you're tardy/cutting/absent for a required student attendance and by how long. For when will the attendance consider the user tardy or absent, the one who created it will specify it in their attendance
@@ -37,9 +39,6 @@ You would be marked 14 minutes late in Daily Attendance Sheet
 With Self-record attendance system: 
 If you recorded your attendance, the attendance will get the current time to check if your record is past the indicated tary/absent mark. If yes (tardy), your recording will include how long you were tardy for (such as in minutes). If instead the the current time meets the absent mark, your attendance would be marked "Absent".
 
-As example
-•	Settings feature
-• Notifications
 
 Planned Inputs and Outputs:
 1.
