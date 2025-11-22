@@ -96,7 +96,11 @@ Program displays the following:
 Else:
 • Program displays fields/required entries from attendance tracker owner and will be reflected as "Present."
 
-7.
+7. 
+(Program) Output: Asks user a way to countercheck their attemdamce (Example: image of being in the area)
+(User) Input: Inputs way to countercheck their attendance
+
+8.
 (User) Input: Selects Account settings on main page:
 (Program) Output:
 Program displays the following:
@@ -105,7 +109,7 @@ Program displays the following:
   • Time Format
   • Appearances and Notifications 
 
-8.
+9.
 (User) Input: Selects to log out
 (Program) Output:
 Program displays "Session ended."
