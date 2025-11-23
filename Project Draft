@@ -56,42 +56,42 @@ Planned Inputs and Outputs:
 • Display "Invalid account name or password. Please try again."
 
 3.
-(User) Input: Chooses the option to create an attendance tracker
+(User) Input: Chooses the option to create an attendance
 (Program) Output:
-• Asks user to enter attendance tracker name, when to start and stop consider attendance submissions as "Present", and method of attendance (e.g, pin/password).
+• Asks user to enter attendance name, when to start and stop consider attendance submissions as "Present", and method of attendance (e.g, pin/password).
 (Example for start and stop checking attendance format: MM, DD, YYYY, from [Start Time] to [End Time]
-• Additionally asks user whether they want to modify attendance tracker 
+• Additionally asks user whether they want to modify attendance
 • Show user a preview of what their attendance trakcer (for attendee point of view)
 
 4.
-(User) Input: Checking attendance trackers (Made by the user)
+(User) Input: Checking attendances (Made by the user)
 (Program) Output:
-If user hasn't made any attendance trackers:
-  • Program displays "No current attendance trackers you've made.
+If user hasn't made any attendances:
+  • Program displays "No current attendance  s you've made.
 Otherwise:
-  • Program displays current attendance trackers made by user
+  • Program displays current attendances made by user
 
 5.
-(User) Input: Checks overview of attendance tracker
+(User) Input: Checks overview of attendance  
 (Program) Output:
 Program displays the following:
-• Attendance tracker status (Not started, Ongoing, Ended)
+• Attendance   status (Not started, Ongoing, Ended)
 • Attendee entries and info (e.g, account name, time of attendance tracked)
 • Option to give comments from attendee entries and change attendees' status
 
 6.
-(User) Input: Records their attendance for an attendence tracker
+(User) Input: Records their attendance for an attendence
 (Program) Output:
-• First, the program asks user for the attendance tracker name (Case-sensitive).
+• First, the program asks user for the attendance name (Case-sensitive).
   If name isn't valid:
     • Program displays "Name not valid. Please try again."
   If name is correct, but...
     Attendance tracking hasn't started:
-      • Program displays "Attendance tracker hasn't started yet. Try again later."
+      • Program displays "Attendance hasn't started yet. Try again later."
     Attendance tracking is no longer accepting "Present" attendance submissions:
-      • Program displays fields/required entries from attendance tracker owner but will be reflected as "Tardy."
+      • Program displays fields/required entries from attendance owner but will be reflected as "Tardy."
 Else:
-• Program displays fields/required entries from attendance tracker owner and will be reflected as "Present."
+• Program displays fields/required entries from attendance owner and will be reflected as "Present."
 
 7. 
 (Program) Output: Asks user a way to countercheck their attemdamce (Example: image of being in the area)
