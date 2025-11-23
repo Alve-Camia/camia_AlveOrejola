@@ -8,7 +8,7 @@ manual tracking, this method of attendance over relies on one or more people to 
 attendance and send it to the person handling it. However, features will be needed to avoid dishonest attendance recording. That way, the 
 finished project would have less loopholes and prevent academic dishonesty
 Notes:
-1. Essentially, the last sentence is saying that we’re trying to avoid a “false positive” in a student’s attendance, specifically those who are recorded as “Present” when they’re actually not.
+1. Essentially, the last sentence is saying that we’re trying to avoid a “false positive/false negative” in a student’s attendance, specifically those who are recorded as “Present” when they’re actually not.
 
 2. We are intending to add a feature/s such that before you can even record yourself "Present", you would be asked some way to prove you were actually present. Specifically, the attendance would have an assigned password (While making the attedance, the person who's creating would first need to assign it a passowrd.) This password would be the main way to prove your actually present.
 
@@ -32,14 +32,11 @@ Note for 3rd feature:
 1. It will be included in the 2nd feature
 2. Note for 3rd feature: Since you are the one to record your own attendance, the time you do so will be important to check if you're tardy/cutting/absent for a required student attendance and by how long. For when will the attendance consider the user tardy or absent, the one who created it will specify it in their attendance
 As example (only): 
-IF you were late to a class by 14 minutes:
-
+If you were late to a class by 14 minutes:
 Without Self-record attendance system: 
 You would be marked 14 minutes late in Daily Attendance Sheet
-
 With Self-record attendance system: 
 If you recorded your attendance, the attendance will get the current time to check if your record is past the indicated tary/absent mark. If yes (tardy), your recording will include how long you were tardy for (such as in minutes). If instead the the current time meets the absent mark, your attendance would be marked "Absent".
-
 
 Planned Inputs and Outputs:
 1.
@@ -107,7 +104,7 @@ Program displays the following:
   • Change account name or password 
   • Manage Attendance Record History
   • Time Format
-  • Appearances and Notifications 
+  • Appearances
 
 9.
 (User) Input: Selects to log out
