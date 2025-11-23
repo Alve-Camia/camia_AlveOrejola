@@ -101,7 +101,7 @@ Else:
 (User) Input: Selects Account settings on main page:
 (Program) Output:
 Program displays the following:
-  • Change account name or password 
+  • Change account password 
   • Manage Attendance Record History
   • Time Format
   • Appearances
