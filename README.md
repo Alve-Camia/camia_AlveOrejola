@@ -27,8 +27,6 @@ Overall, this project will try to solve the problems of slow and unreliable atte
 
 • Settings feature
 
-• Notifications
- 
 ## How to run the program
 1. Make sure you have Python installed.
 2. Download the file `Attendance_Checker.py`.
