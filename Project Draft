@@ -3,10 +3,17 @@ Project title: Self-record Attendance System
 Problem Statement: 
   When it comes to attendance, there is still a use of manual and automated attendance tracking. Though it has reasonable efficiency, issues still arise from it. For attendance involving
 manual tracking, this method of attendance over relies on one or more people to check the attendance. On the other hand, the automated attendance in our campus such as the QR scanner/terminal can be considered automated and faster, but one terminal can only accommodate one student at a time. Even if there were multiple terminals, its unsurprising that there would still be lines of students waiting.
+
+Example 1: On November 21, 2025, specifically during Noise vs. Voice Talk Attendance
+During attendance, there was “signing your signature next to your name in a batch list”. Functional, but considering there are a lot of students, student body going there, plus potential delays due to technical difficulties or some arrived late, then you get a time delay which delayed the program schedule
+
+Example 2: Role of Homeroom / Class Adviser in Student’s attendance (Based on the PSHSS CIM 7.0 Student’s Attendance V2_Rev1.pdf)
+The Homeroom/Class adviser has to check and combine the attendance of all students and reflect on their report card (File reports to SCO if needed). Additionally, the Homeroom / Class Adviser needs to submit two copies of the filled out Record on Attendance and Punctuality to the Homeroom Unit Coordinator. Considering the number of days the attendance of students is required, it may be tedious to do these processes.
   
   For this automated attendance system project, we will attempt to make an attendance system that addresses the following issues said earlier, ideally by allowing one to record their 
 attendance and send it to the person handling it. However, features will be needed to avoid dishonest attendance recording. That way, the 
 finished project would have less loopholes and prevent academic dishonesty
+--------
 Notes:
 1. Essentially, the last sentence is saying that we’re trying to avoid a “false positive/false negative” in a student’s attendance, specifically those who are recorded as “Present” when they’re actually not.
 
@@ -17,6 +24,13 @@ While trying to record yourself present, the attendance recorder would ask the u
 
 It should be noted that this main point wouldn't completely guarantee integrity since the info of the new passwords can still be relayed to those aren't actually present (such as via messenger). To solve this, the self-record attendance will ask the user to submit something that allows it to countercheck their attendance (such as an image of them at the area)
 
+Measures for data integrity:
+PIN/Password – Can be disclosed by the one facilitating the attendance; main way to check who’s there
+Counter Checking – Will ask user a way to counter check their attendance / prove their actually there
+Account – Whoever’s account is currently used will be reflected of for the attendance report once you filled out the attendance
+Required Fields – Attendance can ask for other things/info if needed. 
+System Time – will be used to check when the user has recorded their attendance. Based on the time, it will be used to check the attendance status of the user. The user who created the attendance will specify when the time of recording of attendance is tardy, absent, cutting, etc. 
+
 
 Project Objectives:
 •	Allow students to record their attendance instead of relying on a single person/terminal to do so. (Generally by classes or time(s)/date(s) that aren't durning classes but still require student's attendance such as SALINLAHI 2025)
@@ -25,7 +39,7 @@ Project Objectives:
 Planned Features: 
 • Log in and log out program feature
 •	Option to (create/check, record) an attendance
-•	Current time utilization for checking attendance
+•	System time utilization for checking attendance
 •	Settings feature
 
 Note for 3rd feature:
