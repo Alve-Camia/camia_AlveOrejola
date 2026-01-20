@@ -1,0 +1,8 @@
+# CHANGELOG 
+This file lists all updates made to the Self-record Attendance System project, specigically the updates in the project's code.
+---
+## Version v0.0.0 - January 20, 2026
+- First Version of the program
+- Currently the user can:
+  - Sign up for an account for the program (Has restrictions such as 8 characters for minimum password, no empty entered user and/or password, only letters for account name)
+  - Log in using the account name and password entered during sign up (Displays a message in green when the user logs in and specifies what time
