@@ -1,6 +1,11 @@
 # CHANGELOG 
 This file lists all updates made to the Self-record Attendance System project, specigically the updates in the project's code.
 ---
+## Version v0.1.1 - January 24, 2026
+- 3rd Version of the program
+- Modified how widgets are called in the code through using seperate frames for each part of the program
+- Modified the clock in the menu so that it now updates every second
+---
 ## Version v0.1.0 - January 22, 2026
 - 2nd Version of the program
 - Modified username restrictions, specifically usernames can now have spaces so long that there are at least letters in the username as well.
