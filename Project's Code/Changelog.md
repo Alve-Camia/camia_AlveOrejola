@@ -1,5 +1,5 @@
 # CHANGELOG 
-This file lists all updates made to the Self-record Attendance System project, specigically the updates in the project's code.
+This file lists all updates made to the Self-record Attendance System project, specifically the updates in the project's code.
 ---
 ## Version v0.1.1 - January 24, 2026
 - 3rd Version of the program
