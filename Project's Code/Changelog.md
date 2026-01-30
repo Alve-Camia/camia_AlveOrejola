@@ -1,6 +1,14 @@
 # CHANGELOG 
 This file lists all updates made to the Self-record Attendance System project, specifically the updates in the project's code.
 ---
+## Version v0.2.0 - January 30, 2026
+-  Version 4 of the program
+- Changed how most of the widgets for each frame are called
+- Added Hashing and Salting for passwords when saved in users.txt
+- Changed the widget variable names in the code (FrameName_Description_WidgetType)
+- Added a settings menu and a menu for create attendance (They currently have a demo message)
+- Changed the use of comments in the code
+---
 ## Version v0.1.1 - January 24, 2026
 - 3rd Version of the program
 - Modified how widgets are called in the code through using seperate frames for each part of the program
