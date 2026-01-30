@@ -1,5 +1,6 @@
-import tkinter as tk 
-from tkinter import messagebox
+import tkinter as tk # For user interface
+from tkinter import messagebox # For error handling and messages
+from datetime import datetime # For checking log in time
 import bcrypt
 
 def hash_password(password):
@@ -7,6 +8,7 @@ def hash_password(password):
     salt = bcrypt.gensalt()
     hash = bcrypt.hashpw(bytes, salt)
     return hash
+
 def attendance_create_menu():
     show_frame(create_frame)
 
