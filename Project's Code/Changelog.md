@@ -1,6 +1,28 @@
 # CHANGELOG 
 This file lists all updates made to the Self-record Attendance System project, specifically the updates in the project's code.
 ---
+## Version v0.3.0 - February 4, 2026
+- 5th version of the code:
+- Added SQLite Database, specifically attendance.db to replace the text file storage
+- Added an initialization of the tables used for the database
+- Added the Create, Fill Out, and View attendances in the Attendance Menu
+- Added a tracking logic with the attendance submissions (Minutes until considered late)
+- Added bcrypt hashing for attendance password
+- Added Countercheck feature, specifically the question and answer verification
+- Added Attendance Status (On time, Late, Absent)
+- Added ttk.Treeview to view creator and participant attendance views
+- Added "Light Mode and Dark Mode" in Settings
+- Added a "search query" for the View Attendance
+- Added timestamps for login logging
+- Added a feature that tracks who is the current user in session
+- Modified attendance creation such that it has Start/End Date & Time Validation
+- Modified the password requirement on sign up (Password now requires 10 characters)
+- Modified where bcrypt hashed for user authentication are now stored (SQlite is now used instead of .txt files)
+- Modified Log Out wherein there is a confirmation prompt
+- Modified Error handling messages
+- Removed Demo Messages for attendance Buttons as it now has functionality
+- Removed use of text files for storing data
+---
 ## Version v0.2.0 - January 30, 2026
 -  Version 4 of the program
 - Changed how most of the widgets for each frame are called
