@@ -55,8 +55,23 @@ bcrypt.checkpw() works by taking in the following arguments as follows:
 
 bcrypt.checkpw(plain_string, hashed_string)
 
-The bcrypt.checkpw() hashes the plain string and uses the salt from the hashed string. If both of the salted and hashed strings match, then the user successfully logs in, and is shown the main menu of the program. Otherwise, the program informs the user that the password is incorrect.
+The bcrypt.checkpw() hashes the plain string and uses the salt from the hashed string. If both of the salted and hashed strings match, then the user successfully logs in, and is shown the main menu of the program. The program additionally tracks who is the current user. Otherwise, the program informs the user that the password is incorrect.
 
 1.1.2 Log Out
 
 In the main menu of the program, the user can click "log out" to log out of the program. When they do so, they are asked first, to confirm that they intend to logout. This is to prevent accidental log out, and make the user enter their login credentials again. If the user clicks "Yes" in the log out confirm prompt, then they would log out and be shown the login menu. Otherwise, if the user clicks "No", then they would be shown the attendance menu, and nothing happens.
+
+1.1.3 Sign Up
+
+A sign up system and sub-feature was implemented for the login and log out feature because of two main reasons:
+
+1. Manually adding users would take significant time, especially because you need to use hashed passwords.
+2. Manually adding users would not scale well with tens or hundreds of users.
+
+The sign up feature works by taking in what the user has entered when they entered an account name and an account password. First, the sign up system checks if the user has entered empty sign up credentials, and informs the user about it if there are. Then, the program checks if the entered sign up credentials match the requirements stated in the log in menu
+
+Account Name: Only Letters and Spaces (Spaces by themself will not be accepted, as it can confuse users when the an non-named user submits attendance, and the submission in View Attendances shows their name as whitspace)
+
+Password: At least 10 characters
+
+If the entered sign up details do not match the specifications, then the user is informed about it and is asked to change their sign up details. Otherwise, the sign up system accepts the account name, hashes and salts the entered account password through bcrypt, inserts the sign up credentials in the USERS table, and prompts the user that they successfully signed up.
