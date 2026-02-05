@@ -156,3 +156,22 @@ question before they can be done filling out the attendance. This section of the
 
 Finally, a connection and cursor is used for inserting the recording of attendnce in the SUBMISSION table in the attendance.db. Then, the user is prompted that their attendance was recordrd, along with their
 punctuality status.
+
+## 2. Technologies Used (with justification)
+### 2.1 Python
+Python is an object-oriented programming language that is used in the project's code for the following reasons:
+- Python's Self-documentation / Readability
+One of Python's main advantages is that it emphasizes and helps with the readability of code through simple syntaxes (syntaxes are self-descriptive and are English-like), minimalist design (does not use numerous parenthesis or special characters), use of whitespace and mandatory indentation, and explicit, clear error messages (uses carets to pinpoint an issue with a line of code). Because of these reasons, it helps with the project code's maintainability and collaboration (In increased size and complexity of codes, reading code is done more than writing it. This helps with coders and developers when updates or snippets of code are given as they have readability)
+- Python's Comprehensive Standard Library
+  Python has numerous amounts libraries used for specific tasks such as computations, datetime handling, UI, string, etc. This helps with the project's code through the multiple librarie's readable, and straightfoward use and syntax that decreases the complexity of code in certain areas of the program.
+### 2.2 Tkinter
+Tkinter, additionally called "Tk interface" is a built-in library for creating a GUI (Graphical User Interface) for python programs. The following is a list of reasons why Tkinter is used in the project code:
+- No Separate installation required
+  Tkinter is also installed in most Python installations. This means that to separate or complex installiation is required to use it when using it in code. This helps in the project code by not making the code too heavily focused on making th user interface itself
+- Tkinter's Syntax and learning curve
+  The syntax of tkinter is straightfoward (self-documenting and self-explanatory), resulting in a less steep learning curve and helps as a less complex and introductory-like GUI for beginners or those who aren't familiar with implementing GUI in coding. This helps in the project code because it functions as a less complex way to establish how the UI for the program is intented to appear.
+- Lightweight and fast
+  Because it is associated with a C-base toolkit, it is not resource intensive when running, leading to less issues when running the code as it increase in size
+### 2.3 bcrypt
+
+### 2.4 SQLite
