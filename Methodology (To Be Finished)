@@ -31,7 +31,7 @@ Methodology Contents
   5.1 User Privacy
   5.2 Data Minimization
   5.3 Accessibility
-6. References
+6. References 
 
 Methodology
 
@@ -40,8 +40,23 @@ The following content in Section 1 of the methodology contains how were the feat
 Currently, there are three main features made: user authentication feature, atendance Feature, and system time feature. Note that these aren't the only features of the program
 1.1 Log in and Log Out
 1.1.1 Log in
-The login and log out feaure of the program was implemented using a username (account name) and password system, which additionally used a database storage (SQLite). When the user enters their account name and password and presses the "Log In" button, the program accepts the user's input and compares it to the current data in the database. As of now, the code assumes that the connection will always work, though in real-world scenarios it wouldn't for reasons such as file permissions, corrupted/missing database.
 
-First, the program checks if the user has inputted empty entries for the entry boxes (Empty entries in this case are inputs that are only spaces and inputs that do not have input characters). If the user entered an empty entry, the program would notify the user via a pop-up message stating that there is an empty entry. Otherwise, the program will accept what the user has entered. Next, the program checks if the entered account name exists in the data storage (if not, give the user a pop-up message regarding it). If the entered account name does exist, it then compares the entered password to the password that corresponds to the account name in the data storage via bcrypt.checkpw(), which does so by the following:
+The login system of the program was implemented using an account name and hashed password system. A login system was used instead of directly showing the user the main menu in order to implement current user session tracking. The current user tracking is implemented to prevent users from falsifying attendance record through impersonation of another user.
 
-bcrypt.checkpw(plaintext, stored_hash): Note that plaintext and stored_hash would need to be bytes for this to work.
+When the user presses log in, the login system checks whether there are empty inputted login credentials. If there empty credentials, the user would be notified about it with a pop-up message, and will be asked to enter the missing login credentials/s. Next, the program checks if the entered login credentials appear in the USERS table in the database. 
+
+If the entered account name is not stored in the USERS table, the program notifies the user about it and asks user to reenter login credentials. The comparison of whether the account name is stored in the USERS table is case-insensitive.
+
+If the entered account name is found, the login system checks if the entered password corresponds to the stored, hashed password in the USERS table in the database. If the user did not enter their account password, the program would notify the user about it. Otherwise, the program proceeds, and uses bcrypt.checkpw() to check verify whether the entered account password matches with the entered account name.
+
+bcrypt.checkpw() is used because when the user signs up, their password is hashed and salted and stored in the USERS table to prevent data breach of account passwords and prevent rainbow-table attacks if someone were to gain unauthorized access to the attendance database.
+
+bcrypt.checkpw() works by taking in the following arguments as follows:
+
+bcrypt.checkpw(plain_string, hashed_string)
+
+The bcrypt.checkpw() hashes the plain string and uses the salt from the hashed string. If both of the salted and hashed strings match, then the user successfully logs in, and is shown the main menu of the program. Otherwise, the program informs the user that the password is incorrect.
+
+1.1.2 Log Out
+
+In the main menu of the program, the user can click "log out" to log out of the program. When they do so, they are asked first, to confirm that they intend to logout. This is to prevent accidental log out, and make the user enter their login credentials again. If the user clicks "Yes" in the log out confirm prompt, then they would log out and be shown the login menu. Otherwise, if the user clicks "No", then they would be shown the attendance menu, and nothing happens.
