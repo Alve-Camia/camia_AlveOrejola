@@ -5,7 +5,7 @@
 ###     1.1.1 Log In
 ###     1.1.2 Log Out
 ###     1.1.3 Account Creation (Sign Up)
-##    1.2 Attendance Features
+##    1.2 Attendance Features and System time Utilization for Attendance Punctuality
 ###      1.2.1 Create Attendance
 ###      1.2.2 View Attendance/s
 ###      1.2.3 Fill Out Attendance
@@ -37,7 +37,9 @@ Note for 1.1 and 1.2:
 
 Both their flow and system during the connection of SQLite use parameter placeholders (?) during retrieval (SELECT) and inserting (INSERT) of data. This is used to prevent SQL injection,
 a type of injection code attack that results in the backend of applications to run SQL queries or commands that can result in data breach effects such as database comprimisation (Happens when user enters 
-the SQL commands in empty fields or input).
+the SQL commands in empty fields or input). Additionally, the system time utlization is part of the Attendance Feature, so 1.2 will be used to explain both of those
+features.
+
 ### 1.1 Log in and Log Out
 
 #### 1.1.1 Log in
@@ -86,7 +88,7 @@ Password: At least 10 characters
 If the entered sign up details do not match the specifications, then the user is informed about it and is asked to change their sign up details. Otherwise, the sign up system accepts the account name, hashes
 and salts the entered account password through bcrypt, inserts the sign up credentials in the USERS table, and prompts the user that they successfully signed up.
 
-### 1.2 Attendance Feature
+### 1.2 Attendance Features and System time Utilization for Attendance Punctuality
 
 #### 1.2.1 Create Attendance
 The create attendance feature is implemented to make attendances in the program and add additional parts such as attendance password and counterchecking question to help with the data integrity of the program. 
