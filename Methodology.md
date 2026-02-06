@@ -30,20 +30,20 @@
 ## Methodology
 
 ## 1. Implementation of Core Features
-    The following content in Section 1 of the methodology contains how were the features of the Self-Record Attendance System were implementated. Currently, there are three main features made: 
+The following content in Section 1 of the methodology contains how were the features of the Self-Record Attendance System were implementated. Currently, there are three main features made: 
 user authentication feature, atendance Feature, and system time feature.
 
 Note for 1.1 and 1.2: 
 
-    Both their flow and system during the connection of SQLite use parameter placeholders (?) during retrieval (SELECT) and inserting (INSERT) of data. This is used to prevent SQL injection,
+Both their flow and system during the connection of SQLite use parameter placeholders (?) during retrieval (SELECT) and inserting (INSERT) of data. This is used to prevent SQL injection,
 a type of injection code attack that results in the backend of applications to run SQL queries or commands that can result in data breach effects such as database comprimisation (Happens when user enters 
 the SQL commands in empty fields or input).
 ### 1.1 Log in and Log Out
 
 #### 1.1.1 Log in
 
-    The login system of the program was implemented using an account name and hashed password system. A login system was used instead of directly showing the user the main menu in order to implement current 
-user session tracking. The current user tracking is implemented to prevent users from falsifying attendance record through impersonation of another user. When the user presses log in, the login system checks
+The login system of the program was implemented using an account name and hashed password system. A login system was used instead of directly showing the user the main menu in order to implement current user
+session tracking. The current user tracking is implemented to prevent users from falsifying attendance record through impersonation of another user. When the user presses log in, the login system checks
 whether there are empty inputted login credentials. If there empty credentials, the user would be notified about it with a pop-up message, and will be asked to enter the missing login credentials/s. Next, 
 the program checks if the entered login credentials appear in the USERS table in the database. 
 
@@ -160,7 +160,7 @@ Python is an object-oriented programming language that is used in the project's 
 
 - Python's Self-documentation / Readability:
 
-    One of Python's main advantages is that it emphasizes and helps with the readability of code through simple syntaxes (syntaxes are self-descriptive and are English-like), minimalist design
+One of Python's main advantages is that it emphasizes and helps with the readability of code through simple syntaxes (syntaxes are self-descriptive and are English-like), minimalist design
   (does not use numerous parenthesis or special characters), use of whitespace and mandatory indentation, and explicit, clear error messages (uses carets to pinpoint an issue with a line of code).
   Because of these reasons, it helps with the project code's maintainability and collaboration (In increased size and complexity of codes, reading code is done more than writing it. This helps with coders
   and developers when updates or snippets of code are given as they have readability)
@@ -187,14 +187,14 @@ Tkinter, additionally called "Tk interface" is a built-in library for creating a
 
 ### 2.3 bcrypt
 
-    bcrypt is a type of password-hashing function that uses the Blowfish cipher for its algorithmm. It uses a one-way, irreversible, slow-running password hashing function used specifically for
+bcrypt is a type of password-hashing function that uses the Blowfish cipher for its algorithmm. It uses a one-way, irreversible, slow-running password hashing function used specifically for
 secure password hashing and storage that can resist brute-force attacks (guessing all combinations, dictionary attacks) through its slow and memory-intensive hashing. It was used in this program in order to
 encrypt the passwords used for accounts and attendances (If the user were to get the access to the database or info about the passwords, they would be hashed and salted, so they can't decipher or decode it 
 to find the account password of other users).
 
 ### 2.4 SQLite
 
-    SQLite is used in the following program for the following reasons:
+SQLite is used in the following program for the following reasons:
 - SQLite organizes the data stored into structured table with columns that supports different data types. This structure of storing data requires less complexity for data parsing and interpretation when
   fetched.
 - SQLite databases have scalability when handling hundereds ot thousands of data, and can use indexes for speeding up data retrival in large amounts of data. Additionally, because of its use of SQL query
@@ -206,7 +206,7 @@ to find the account password of other users).
 ###  3.1 Tkinter (Frontend)
 Note: UI means user interface, and UX means user experience
 
-    Tkinter as the frontend and graphical user interface contributes to the project code through its interactions with the backend, Python, and with its widgets and pop-up messages (that give info about user's
+Tkinter as the frontend and graphical user interface contributes to the project code through its interactions with the backend, Python, and with its widgets and pop-up messages (that give info about user's
 actions such as errors or info notices), that provide the user interactivity rather than using the a text-based user interface.  For the UI and UX point of view, it displays
 widgets such as labels, buttons, entries, and tables in a vertical format that allow users to navigate the different part of the program. For the its interactions with the backend, when users interact with 
 widgets, Tkinter takes this input and gives it to the backend of the program, and changes the current frame shown to the user accordingly (or gives user pop-up messages). For example, when the user enters 
@@ -215,11 +215,15 @@ computated results or info. After that, tkinter gives or changes the respective 
 
 ###  3.2 Python (Backend)
 
-    Python as the backend and logic flow of the program contributes to the project code by acting as how the program works. In addition, it acts as the middle with its interaction with the frontend and storage layer. It does certain processes such as input validation, data integrity, computation, and more. Whenever the backend receives an input and/or an interaction from the frontend, the backend generally first does inputvalidation to check if the user input meets certain condition. After that, the backend does computation for certain actions or calculations such as hashing, time parsing, or time calculation. After that, it either results in the backend interacting with the frontend to do or display certain widgets, or it interacts with the storage do store certain data from its computation. To add on, the backend can communitcate with the storage the retreive certain data from tables, compare it with the data given from the frontend. This results in either interaction with the frontend or the storage.
+Python as the backend and logic flow of the program contributes to the project code by acting as how the program works. In addition, it acts as the middle with its interaction with the frontend and storage
+layer. It does certain processes such as input validation, data integrity, computation, and more. Whenever the backend receives an input and/or an interaction from the frontend, the backend generally first 
+does inputvalidation to check if the user input meets certain condition. After that, the backend does computation for certain actions or calculations such as hashing, time parsing, or time calculation. 
+After that, it either results in the backend interacting with the frontend to do or display certain widgets, or it interacts with the storage do store certain data from its computation. To add on, the 
+backend can communitcate with the storage the retreive certain data from tables, compare it with the data given from the frontend. This results in either interaction with the frontend or the storage.
 
 ###  3.3 SQLite (Storage)
 
-    SQLite as the storage of the program contributes to the project code by being able to save certain data inputs that result from the backend processing it. Then, it stores that data in certian tables 
+SQLite as the storage of the program contributes to the project code by being able to save certain data inputs that result from the backend processing it. Then, it stores that data in certian tables 
 of the attendance database. In addition, the attendance database can retrieve data from its tables to give to the backend for computing. The storage layer does not directly interact with the frontend. Instead,
 it uses the backend and SQL commands to communicate with the backend tp process it and display or use it for the frontend. An example would be when the user goes to the view attendances, and
 the storage gives the appropriate table data to the backend for processing. Then the backend gives the fronend the processed data to output it.
@@ -237,7 +241,7 @@ dragging the clocks hands. This feature introduces increased user-interaction co
 Manual date and time input has trade-offs such as the abscence of day-of-week information and less visual guidance during date selection. However, these trade-offs were accepted in the design choice
 because it simpliefies interaction and accessibility.
 ###  4.2 Single-file Architecture
-     All parts and components of the code such as application logic, user interface, and database connections were coded inside one file. This decision was made in order to help with testing the code
+All parts and components of the code such as application logic, user interface, and database connections were coded inside one file. This decision was made in order to help with testing the code
 from start to finish by reducing the code's structure complexitity. Additionally, it provides a traceable way to read the flow of the program. The single-file architecture additionally helps with
 code sharing because the entire system is in a single file, and it does not require additional dependencies.
 
@@ -245,7 +249,7 @@ The single-file architecture limits readability and maintainability. However, th
 and by using the PEP (Python Enhancement Proposal) style guide to maintain readability.
 ###  4.3 Pop-up validation messages
 
-    For informing the user of info, warnings, and questions, and pop-up validation message was used. First, it provides the user immediate user feedback of whether there is an error, results of input, and more.
+For informing the user of info, warnings, and questions, and pop-up validation message was used. First, it provides the user immediate user feedback of whether there is an error, results of input, and more.
 Additionally, it reduces the confusion of why certain actions don't result in the expected outcome (error messages). Pop-up messages assist this by displaying the error to the user instead of appearing as a
 console message. Moreover, pop-up messages assist in the user experience of the program as the flow of the application is an event-driven GUI.
 
@@ -268,7 +272,7 @@ project scope and expected usage scale is expected to be in the hundereds or tho
 
 ###  5.1 User Privacy
     
-    To address user privacy concerns, the program system implementes hashing and salting of account and attendance password through using bcrypt(utf-8) library instead of storing credentials i
+To address user privacy concerns, the program system implementes hashing and salting of account and attendance password through using bcrypt(utf-8) library instead of storing credentials i
 plaintext. This design decision was chosen to reduce the effects of data breach and credential exposure of accounts and attendances in the scenario of
 unauthorized database access. The structure works by hashing and salting user and attendance credentials when inserted into the ATTENDANCES table of the attendance daabase. To add on, sensitive data
 is only used in backend-storage interactions, ensuring that sensitive data will not reach the frontend. It is additionally noted that the storage layer uses parameter placeholders to prevent unathorized
