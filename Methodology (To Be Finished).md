@@ -28,8 +28,7 @@
 ###  4.4 Database Usage (SQLite)
 ## 5. References to Ethical Considerations in Programming Choices
 ###  5.1 User Privacy
-###  5.2 Data Minimization
-###  5.3 Accessibility
+###  5.2 Accessibility
 
 ## Methodology
 
@@ -73,7 +72,7 @@ they would be shown the attendance menu, and nothing happens.
 
 #### 1.1.3 Account Creation (Sign Up)
 
-A sign up system and sub-feature was implemented for the login and log out feature because of three main reasons:
+A sign up system and feature was implemented for the login and log out feature because of three main reasons:
 
 1. The user wouldn't have an account unless they would manually make an account through a data storage
 2. Manually adding users would take significant time, especially because you need to consider how the data will be inputted (e.g, hashed passwords will need to be entered).
@@ -141,7 +140,7 @@ On the other hand, the participant table is populated by getting the data entrie
 is iterated in the participant table.
 
 #### 1.2.3 Fill Out Attendance
-The fill out attendance is a sub-feature of the 2nd Core feature of the program (Attendance Feature) that allows participants to record their attendance. The following describes how it was implemented
+The fill out attendance is a feature of the 2nd Core feature of the program (Attendance Feature) that allows participants to record their attendance. The following describes how it was implemented
 First, the fill out feature uses texts (tk.Label) and fields (tk.Entry) to allow the user to enter the attendance name and attendance password (for recording their attendance). Then, the program takes in the 
 user's input and checks if the inputted fill out info is white space (Notifies user about it). Then, the fill out flow system retrieves the data from the ATTENDANCE table in the SQLite attendance.db to first
 check if the entered attendance name is stored and exists. After that, the program uses bcrypt.checkpw() to compare the attendance password entered by the user with the hashed password corresponding to the
@@ -221,9 +220,69 @@ computated results or info. After that, tkinter gives or changes the respective 
 
     Python as the backend and logic flow of the program contributes to the project code by acting as how the program works. In addition, it acts as the middle with its interaction with the frontend and storage layer. It does certain processes such as input validation, data integrity, computation, and more. Whenever the backend receives an input and/or an interaction from the frontend, the backend generally first does inputvalidation to check if the user input meets certain condition. After that, the backend does computation for certain actions or calculations such as hashing, time parsing, or time calculation. After that, it either results in the backend interacting with the frontend to do or display certain widgets, or it interacts with the storage do store certain data from its computation. To add on, the backend can communitcate with the storage the retreive certain data from tables, compare it with the data given from the frontend. This results in either interaction with the frontend or the storage.
 
-###  3.3 SQLite (Storage )
+###  3.3 SQLite (Storage)
 
     SQLite as the storage of the program contributes to the project code by being able to save certain data inputs that result from the backend processing it. Then, it stores that data in certian tables 
 of the attendance database. In addition, the attendance database can retrieve data from its tables to give to the backend for computing. The storage layer does not directly interact with the frontend. Instead,
 it uses the backend and SQL commands to communicate with the backend tp process it and display or use it for the frontend. An example would be when the user goes to the view attendances, and
 the storage gives the appropriate table data to the backend for processing. Then the backend gives the fronend the processed data to output it.
+
+## 4. Key Design decisions or Trade-offs
+
+###  4.1 Manual Date and Time Input
+
+For the time window section of the create attendance feature, a manual date and time input was used instead of a calender widget. The main reason was because
+if the user were to make multiple attendances, it would be reduce interaction steps if the user would manually input the start and end datetime instead of implementing a calender widget 
+(e.g, tkcalender) because of the time spent to navigate through the calender and picking the date. In contrast with calender pickers, manual date and time inputs allow more accessibility by being more 
+accessible for keyboard navigation. In addition it reduces the amount of clicks required to pick a date. Moreover, calender pickers often feature a time picker that uses a clock that can be adjusted by 
+dragging the clocks hands. This feature introduces increased user-interaction complexity for a time picker because you need to click and drag a clock instead of directly entering the time. 
+
+Manual date and time input has trade-offs such as the abscence of day-of-week information and less visual guidance during date selection. However, these trade-offs were accepted in the design choice
+because it simpliefies interaction and accessibility.
+###  4.2 Single-file Architecture
+     All parts and components of the code such as application logic, user interface, and database connections were coded inside one file. This decision was made in order to help with testing the code
+from start to finish by reducing the code's structure complexitity. Additionally, it provides a traceable way to read the flow of the program. The single-file architecture additionally helps with
+code sharing because the entire system is in a single file, and it does not require additional dependencies.
+
+The single-file architecture limits readability and maintainability. However, they were accepted in the design choice because their effects can be mitigated through using consistent coding conventions
+and by using the PEP (Python Enhancement Proposal) style guide to maintain readability.
+###  4.3 Pop-up validation messages
+
+    For informing the user of info, warnings, and questions, and pop-up validation message was used. First, it provides the user immediate user feedback of whether there is an error, results of input, and more.
+Additionally, it reduces the confusion of why certain actions don't result in the expected outcome (error messages). Pop-up messages assist this by displaying the error to the user instead of appearing as a
+console message. Moreover, pop-up messages assist in the user experience of the program as the flow of the application is an event-driven GUI.
+
+Pop-up validation messages have trade-offs such as their sudden disruption reducing focus and repetitiveness for repeatedly doing certain actions in the progam. However, these trade-offs were accepted in the
+design choice because it provides user feedback whether something went wrong, and it provides info in the case that their input results in an error, along with instructions on how to prevent it from constantly
+appearing.
+     
+###  4.4 Database Usage (SQLite)
+
+The project code uses SQLite for storing data of what actions were done during a user session. This database was chosen mainly because SQLite does not require numerous steps for server process or setup.
+Moreover, SQLite uses a serverless architecture for its database engine. The serverless architecture contributes with the project code by having no server process for intallation, configuration
+and starting. The approach of using SQLite allows the program to store and retrieve user accounts, attendance records, and submissions. To add, SQLite spports full ACID (Atomicity, Consistency,
+Isolation, Durability) transactions, helping with the data integrity of the program by not inserting corrupt or malformed data entries in the database in the scentario of system crashes.
+
+Using SQLite has tradeoffs such as limited concurrent access handling and scalability for large user environments that other database systems (e.g., MySQL, PostgreSQL)
+can provide. These tradeoffs were accepted in the design choice because it eliminates the requirements for networkd or high-concurrency database access. To add, it is acceptable given that the
+project scope and expected usage scale is expected to be in the hundereds or thousands range (if not tens or hundereds of thousands of users)
+
+## 5. References to Ethical Considerations in Programming Choices
+
+###  5.1 User Privacy
+    
+    To address user privacy concerns, the program system implementes hashing and salting of account and attendance password through using bcrypt(utf-8) library instead of storing credentials i
+plaintext. This design decision was chosen to reduce the effects of data breach and credential exposure of accounts and attendances in the scenario of
+unauthorized database access. The structure works by hashing and salting user and attendance credentials when inserted into the ATTENDANCES table of the attendance daabase. To add on, sensitive data
+is only used in backend-storage interactions, ensuring that sensitive data will not reach the frontend. It is additionally noted that the storage layer uses parameter placeholders to prevent unathorized
+access of attendance.db through SQL injections. Though this overall appproach for user privacy does not use network-level security measures, the current security measures are appropriat for a local and
+not-networked application.
+
+###  5.2 Accessibility
+
+The project code implements user accessibility considerations in the program by implementing the user interface wherein the supports keyboard-based interaction. First, the program uses labeled input fields, 
+navigateable layouts, and pop-up messages for feedback on the event-driven GUI, errors, and status. This approach helps with clear communication to the user of what is happening. Furthermore, the user 
+interface for attendances have manual date and time input supports accessibility by avoiding interface elements that uses a mouse or is drag-based. Lastly, the program allows the user to adjust between
+using light mode and dark mode of the program, which can be found in the appearance setting of the main menu. This feature reduces the amount of light emitted by the program, which assists user who have
+light sensetivity. It additionally helps with minimizing eye strain, and assist users with sepcifc eye conditions (e.g., cataracts). Though the program does not fully meet formal accessibility standards,
+this tradeoff was accepted because the rest of the design choices provide reasonable usability support, and given the limitations of the Tkinter library and framework.
