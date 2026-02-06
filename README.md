@@ -16,23 +16,45 @@ To make sure the system checks the inputs and outputs properly so there’s no d
 
 Overall, this project will try to solve the problems of slow and unreliable attendance systems while making the process more fair and organized.
 
-
-
 ## Features
-• Log in and log out program feature
+• Login and Log Out feature
 
-• Option to (create/check, record) an attendance checker
+• (Creating, Viewing, or Filling out) Attendance
 
-• Current time utulization for checking attendance 
+• System time utulization for attendance punctuality 
 
 • Settings feature
 
 ## How to run the program
-1. Make sure you have Python installed.
-2. Download the file `Attendance_Checker.py`.
+1A. Ensure that Python is installed in your program. This can be done by running either of the following lines in your command prompt or terminal:
+
+  `python --version`
+  
+  `python3 --version`
+
+The minimum python version that can be used to run the program is Python 3.7, but the recommended python version used for running the program is Python 3.9+.
+
+If Python is not installed in in your program, or the current python version in the python program is older than Python 3.7, it is downloadable through `Python.org`.
+
+1B. Ensure that Tkinter and bcrypt are installed in your program. This can be checked by running the following code on a command prompt or terminal:
+
+Command Prompt (cmd): `python -m tkinter` for Tkinter, and `pip show bcrypt` for bcrypt
+
+Terminal: `python3 -m tkinter`for Tkinter, and `python3 -c "import bcrypt"` for bcrypt
+
+If either of the following libraries are missing, they can be downloaded via running the following lines on a command prompt or terminal:
+
+cmd: `pip install tkinter` for Tkinter and `pip install bcrypt` for bcrypt
+
+terminal: `brew install python-tk` for Tkinter and `pip3 install bcrypt` for bcrypt
+
+2. Download the file `Self-record Attendance.py`, or copy-paste the code from it and paste it onto a python file.
+
 3. Open a terminal or command prompt.
+
 4. Run the program by pressing F5 or clicking 'Run' 
-5. Follow the on-screen instructions to enter log in authentication, options for attendance checkers, etc.
+
+5. Follow the on-screen instructions to enter log in authentication, options for attendance, etc.
 
 ## Example Output:
 Enter Account Name: _Gabriel Aaron L. Alve_
@@ -86,5 +108,5 @@ Session ended.
 If this is a mistake, type Y to go to log in. Otherwise, type anything else to leave: _N_
 
 ## Contributors
-- Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart)
-- Student 2: Claire L. Orejola (README)
+- Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart, Log Out feature, Attendances Feature, System Time feature, Methodology)
+- Student 2: Claire L. Orejola (README, Login feature)
