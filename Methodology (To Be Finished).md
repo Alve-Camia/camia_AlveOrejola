@@ -1,6 +1,3 @@
-# TO BE FINISHED
-## For now, please ignore this file because it is currently not final and will be updated.
-
 # Detailed Methodology
 ## Methodology Contents
 ## 1. Implementation of Core Features
