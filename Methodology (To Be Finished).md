@@ -15,7 +15,7 @@
 ## 2. Technologies Used (with justification)
 ###  2.1 Python
 ###  2.2 Tkinter
-###  2.3 bcrypt (Additionally known as Blowfish crypt)
+###  2.3 bcrypt
 ###  2.4 SQLite
 ## 3. Backend-frontend communication
 ###  3.1 Tkinter (Frontend)
@@ -34,27 +34,27 @@
 ## Methodology
 
 ## 1. Implementation of Core Features
-The following content in Section 1 of the methodology contains how were the features of the Self-Record Attendance System were implementated. 
-Currently, there are three main features made: user authentication feature, atendance Feature, and system time feature.
+    The following content in Section 1 of the methodology contains how were the features of the Self-Record Attendance System were implementated. Currently, there are three main features made: 
+user authentication feature, atendance Feature, and system time feature.
 
-Note for 1.1 and 1.2: Both their flow and system during the connection of SQLite use parameter placeholders (?) during retrieval (SELECT) and inserting (INSERT) of data. This is used to prevent SQL injection,
-a type of injection code attack that results in the backend of applications to run SQL queries or commands that can result in data breach effects such as database comprimisation (Happens when user enters the
-commands in empty fields or input).
+Note for 1.1 and 1.2: 
+
+    Both their flow and system during the connection of SQLite use parameter placeholders (?) during retrieval (SELECT) and inserting (INSERT) of data. This is used to prevent SQL injection,
+a type of injection code attack that results in the backend of applications to run SQL queries or commands that can result in data breach effects such as database comprimisation (Happens when user enters 
+the SQL commands in empty fields or input).
 ### 1.1 Log in and Log Out
 
 #### 1.1.1 Log in
 
-The login system of the program was implemented using an account name and hashed password system. A login system was used instead of directly showing the user the main menu in order to implement current user
-session tracking. The current user tracking is implemented to prevent users from falsifying attendance record through impersonation of another user.
+    The login system of the program was implemented using an account name and hashed password system. A login system was used instead of directly showing the user the main menu in order to implement current 
+user session tracking. The current user tracking is implemented to prevent users from falsifying attendance record through impersonation of another user. When the user presses log in, the login system checks
+whether there are empty inputted login credentials. If there empty credentials, the user would be notified about it with a pop-up message, and will be asked to enter the missing login credentials/s. Next, 
+the program checks if the entered login credentials appear in the USERS table in the database. 
 
-When the user presses log in, the login system checks whether there are empty inputted login credentials. If there empty credentials, the user would be notified about it with a pop-up message, and will be asked
-to enter the missing login credentials/s. Next, the program checks if the entered login credentials appear in the USERS table in the database. 
-
-If the entered account name is not stored in the USERS table, the program notifies the user about it and asks user to reenter login credentials. The comparison of whether the account name is stored in the USERS
-table is case-insensitive.
-
-If the entered account name is found, the login system checks if the entered password corresponds to the stored, hashed password in the USERS table in the database. If the user did not enter their account
-password, the program would notify the user about it. Otherwise, the program proceeds, and uses bcrypt.checkpw() to check verify whether the entered account password matches with the entered account name.
+If the entered account name is not stored in the USERS table, the program notifies the user about it and asks user to reenter login credentials. The comparison of whether the account name is stored in the 
+USERS table is case-insensitive. If the entered account name is found, the login system checks if the entered password corresponds to the stored, hashed password in the USERS table in the database. 
+If the user did not enter their account password, the program would notify the user about it. Otherwise, the program proceeds, and uses bcrypt.checkpw() to check verify whether the entered account 
+password matches with the entered account name.
 
 bcrypt.checkpw() is used because when the user signs up, their password is hashed and salted and stored in the USERS table 
 
@@ -62,13 +62,14 @@ bcrypt.checkpw() works by taking in the following arguments as follows:
 
 bcrypt.checkpw(plain_string.encode(), hashed_string.encode())
 
-The bcrypt.checkpw() hashes the plain string and uses the salt from the hashed string. If both of the salted and hashed strings match, then the user successfully logs in, and is shown the main menu of the program. The program additionally tracks who is the current user. Otherwise, the program informs the user that the password is incorrect.
+The bcrypt.checkpw() hashes the plain string and uses the salt from the hashed string. If both of the salted and hashed strings match, then the user successfully logs in, and is shown the main menu of the
+program. The program additionally tracks who is the current user. Otherwise, the program informs the user that the password is incorrect.
 
 #### 1.1.2 Log Out
 
 In the main menu of the program, the user can click "log out" to log out of the program. When they do so, they are asked first, to confirm that they intend to logout. This is to prevent accidental log out, 
-and make the user enter their login credentials again. If the user clicks "Yes" in the log out confirm prompt, then they would log out and be shown the login menu. Otherwise, if the user clicks "No", then they
-would be shown the attendance menu, and nothing happens.
+and make the user enter their login credentials again. If the user clicks "Yes" in the log out confirm prompt, then they would log out and be shown the login menu. Otherwise, if the user clicks "No", then 
+they would be shown the attendance menu, and nothing happens.
 
 #### 1.1.3 Account Creation (Sign Up)
 
@@ -160,18 +161,69 @@ punctuality status.
 ## 2. Technologies Used (with justification)
 ### 2.1 Python
 Python is an object-oriented programming language that is used in the project's code for the following reasons:
-- Python's Self-documentation / Readability
-One of Python's main advantages is that it emphasizes and helps with the readability of code through simple syntaxes (syntaxes are self-descriptive and are English-like), minimalist design (does not use numerous parenthesis or special characters), use of whitespace and mandatory indentation, and explicit, clear error messages (uses carets to pinpoint an issue with a line of code). Because of these reasons, it helps with the project code's maintainability and collaboration (In increased size and complexity of codes, reading code is done more than writing it. This helps with coders and developers when updates or snippets of code are given as they have readability)
-- Python's Comprehensive Standard Library
-  Python has numerous amounts libraries used for specific tasks such as computations, datetime handling, UI, string, etc. This helps with the project's code through the multiple librarie's readable, and straightfoward use and syntax that decreases the complexity of code in certain areas of the program.
+
+- Python's Self-documentation / Readability:
+
+    One of Python's main advantages is that it emphasizes and helps with the readability of code through simple syntaxes (syntaxes are self-descriptive and are English-like), minimalist design
+  (does not use numerous parenthesis or special characters), use of whitespace and mandatory indentation, and explicit, clear error messages (uses carets to pinpoint an issue with a line of code).
+  Because of these reasons, it helps with the project code's maintainability and collaboration (In increased size and complexity of codes, reading code is done more than writing it. This helps with coders
+  and developers when updates or snippets of code are given as they have readability)
+
+- Python's Comprehensive Standard Library:
+ 
+    Python has numerous amounts libraries used for specific tasks such as computations, datetime handling, UI, string, etc. This helps with the project's code through the multiple librarie's readable,
+  and straightfoward use and syntax that decreases the complexity of code in certain areas of the program.
+
+Though Python has a slow execution speed compared to other object-oriented programming languages (e.g, C++, Java) and high memory usage, Python's library and syntax allows the program to be written with fewer
+lines of code to achieve the same result (so long as the code is not messy and well-written).
+
 ### 2.2 Tkinter
 Tkinter, additionally called "Tk interface" is a built-in library for creating a GUI (Graphical User Interface) for python programs. The following is a list of reasons why Tkinter is used in the project code:
-- No Separate installation required
-  Tkinter is also installed in most Python installations. This means that to separate or complex installiation is required to use it when using it in code. This helps in the project code by not making the code too heavily focused on making th user interface itself
-- Tkinter's Syntax and learning curve
-  The syntax of tkinter is straightfoward (self-documenting and self-explanatory), resulting in a less steep learning curve and helps as a less complex and introductory-like GUI for beginners or those who aren't familiar with implementing GUI in coding. This helps in the project code because it functions as a less complex way to establish how the UI for the program is intented to appear.
-- Lightweight and fast
-  Because it is associated with a C-base toolkit, it is not resource intensive when running, leading to less issues when running the code as it increase in size
+
+- No Separate installation required:
+
+  Tkinter is additionally installed in most Python installations. This means that no separate or complex installiation is required to use it when using it in code. This helps in the project code by not
+   making the code too heavily focused on making the user interface itself
+
+- Tkinter's Syntax and learning curve:
+  The syntax of tkinter is straightfoward (self-documenting and self-explanatory), resulting in a less steep learning curve and helps as a less complex and introductory-like GUI for beginners
+  or those who aren't familiar with implementing GUI in coding. This helps in the project code because it functions as a less complex way to establish how the UI for the program is intented to appear.
+
 ### 2.3 bcrypt
 
+    bcrypt is a type of password-hashing function that uses the Blowfish cipher for its algorithmm. It uses a one-way, irreversible, slow-running password hashing function used specifically for
+secure password hashing and storage that can resist brute-force attacks (guessing all combinations, dictionary attacks) through its slow and memory-intensive hashing. It was used in this program in order to
+encrypt the passwords used for accounts and attendances (If the user were to get the access to the database or info about the passwords, they would be hashed and salted, so they can't decipher or decode it 
+to find the account password of other users).
+
 ### 2.4 SQLite
+
+    SQLite is used in the following program for the following reasons:
+- SQLite organizes the data stored into structured table with columns that supports different data types. This structure of storing data requires less complexity for data parsing and interpretation when
+  fetched.
+- SQLite databases have scalability when handling hundereds ot thousands of data, and can use indexes for speeding up data retrival in large amounts of data. Additionally, because of its use of SQL query
+  language, it allows multiple types of operation for data access and manipulation such as joining, filtering, sorting etc.
+- SQLite's Data storage can handle corruption errors by reporting an error code (SQLITE_CORRUPT) instead of crashing or writing a parial line of code
+
+## Backend-frontend Communication
+
+###  3.1 Tkinter (Frontend)
+Note: UI means user interface, and UX means user experience
+
+    Tkinter as the frontend and graphical user interface contributes to the project code through its interactions with the backend, Python, and with its widgets and pop-up messages (that give info about user's
+actions such as errors or info notices), that provide the user interactivity rather than using the a text-based user interface.  For the UI and UX point of view, it displays
+widgets such as labels, buttons, entries, and tables in a vertical format that allow users to navigate the different part of the program. For the its interactions with the backend, when users interact with 
+widgets, Tkinter takes this input and gives it to the backend of the program, and changes the current frame shown to the user accordingly (or gives user pop-up messages). For example, when the user enters 
+login credentials in the entry fields, and presses the "Log In" button, Tkinter interacts with the Python by going to the corresponding function. Then it gives Python the entered info and gets the 
+computated results or info. After that, tkinter gives or changes the respective certain UI based on the computation given.
+
+###  3.2 Python (Backend)
+
+    Python as the backend and logic flow of the program contributes to the project code by acting as how the program works. In addition, it acts as the middle with its interaction with the frontend and storage layer. It does certain processes such as input validation, data integrity, computation, and more. Whenever the backend receives an input and/or an interaction from the frontend, the backend generally first does inputvalidation to check if the user input meets certain condition. After that, the backend does computation for certain actions or calculations such as hashing, time parsing, or time calculation. After that, it either results in the backend interacting with the frontend to do or display certain widgets, or it interacts with the storage do store certain data from its computation. To add on, the backend can communitcate with the storage the retreive certain data from tables, compare it with the data given from the frontend. This results in either interaction with the frontend or the storage.
+
+###  3.3 SQLite (Storage )
+
+    SQLite as the storage of the program contributes to the project code by being able to save certain data inputs that result from the backend processing it. Then, it stores that data in certian tables 
+of the attendance database. In addition, the attendance database can retrieve data from its tables to give to the backend for computing. The storage layer does not directly interact with the frontend. Instead,
+it uses the backend and SQL commands to communicate with the backend tp process it and display or use it for the frontend. An example would be when the user goes to the view attendances, and
+the storage gives the appropriate table data to the backend for processing. Then the backend gives the fronend the processed data to output it.
