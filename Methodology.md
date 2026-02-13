@@ -5,7 +5,7 @@
 ###     1.1.1 Log In
 ###     1.1.2 Log Out
 ###     1.1.3 Account Creation (Sign Up)
-##    1.2 Attendance Features and System time Utilization for Attendance Punctuality
+##    1.2 Attendance Features and System Time Utilization for Attendance Punctuality
 ###      1.2.1 Create Attendance
 ###      1.2.2 View Attendance/s
 ###      1.2.3 Fill Out Attendance
@@ -18,7 +18,7 @@
 ###  3.1 Tkinter (Frontend)
 ###  3.2 Python (Backend)
 ###  3.3 SQLite (Storage)
-## 4. Key Design decisions or Trade-offs
+## 4. Key Design Decisions or Trade-offs
 ###  4.1 Manual Date and Time Input
 ###  4.2 Single-file Architecture
 ###  4.3 Pop-up validation messages
@@ -30,74 +30,73 @@
 ## Methodology
 
 ## 1. Implementation of Core Features
-The following content in Section 1 of the methodology contains how were the features of the Self-Record Attendance System were implementated. Currently, there are three main features made: 
-user authentication feature, atendance Feature, and system time feature.
+The following content in Section 1 of the methodology describes how the features of the Self-Record Attendance System were implemented. Currently, there are three main features made: 
+user authentication feature, attendance Feature, and system time feature.
 
 Note for 1.1 and 1.2: 
 
-Both their flow and system during the connection of SQLite use parameter placeholders (?) during retrieval (SELECT) and inserting (INSERT) of data. This is used to prevent SQL injection,
-a type of injection code attack that results in the backend of applications to run SQL queries or commands that can result in data breach effects such as database comprimisation (Happens when user enters 
-the SQL commands in empty fields or input). Additionally, the system time utlization is part of the Attendance Feature, so 1.2 will be used to explain both of those
+Both their flow and utilize parameter placeholders (?) during the retrieval (SELECT) and insertion (INSERT) of data in SQLite connections. This is used to prevent SQL injection,
+a type of injection code attack that results in the backend of applications running SQL queries or commands that can result in data breach effects, such as database compromise (Happens when a user enters 
+the SQL commands in empty fields or input). Additionally, the system time utilization is part of the Attendance Feature, so 1.2 will be used to explain both of those
 features.
 
 ### 1.1 Log in and Log Out
 
 #### 1.1.1 Log in
 
-The login system of the program was implemented using an account name and hashed password system. A login system was used instead of directly showing the user the main menu in order to implement current user
-session tracking. The current user tracking is implemented to prevent users from falsifying attendance record through impersonation of another user. When the user presses log in, the login system checks
-whether there are empty inputted login credentials. If there empty credentials, the user would be notified about it with a pop-up message, and will be asked to enter the missing login credentials/s. Next, 
+The login system of the program was implemented using an account name and a hashed password system. A login system was used instead of directly showing the user the main menu to implement current user
+session tracking. The current user tracking is implemented to prevent users from falsifying attendance records through impersonation of another user. When the user presses log in, the login system checks
+whether there are empty login credentials. If there are empty credentials, the user would be notified about it with a pop-up message, and would be asked to enter the missing login credentials/s. Next, 
 the program checks if the entered login credentials appear in the USERS table in the database. 
 
-If the entered account name is not stored in the USERS table, the program notifies the user about it and asks user to reenter login credentials. The comparison of whether the account name is stored in the 
-USERS table is case-insensitive. If the entered account name is found, the login system checks if the entered password corresponds to the stored, hashed password in the USERS table in the database. 
-If the user did not enter their account password, the program would notify the user about it. Otherwise, the program proceeds, and uses bcrypt.checkpw() to check verify whether the entered account 
-password matches with the entered account name.
+If the entered account name is not stored in the USERS table, the program notifies the user about it and asks the user to re-enter login credentials. The comparison of whether the account name is stored in the 
+USERS table, which is case-insensitive. If the entered account name is found, the login system checks if the entered password corresponds to the stored, hashed password in the USERS table in the database. 
+If the user did not enter their account password, the program would notify the user about it. Otherwise, the program proceeds and uses bcrypt.checkpw() to verify whether the entered account password matches the entered account name.
 
-bcrypt.checkpw() is used because when the user signs up, their password is hashed and salted and stored in the USERS table 
+bcrypt.checkpw() is used because when the user signs up, their password is hashed and salted and stored in the USERS table.
 
 bcrypt.checkpw() works by taking in the following arguments as follows:
 
 bcrypt.checkpw(plain_string.encode(), hashed_string.encode())
 
-The bcrypt.checkpw() hashes the plain string and uses the salt from the hashed string. If both of the salted and hashed strings match, then the user successfully logs in, and is shown the main menu of the
-program. The program additionally tracks who is the current user. Otherwise, the program informs the user that the password is incorrect.
+The bcrypt.checkpw() hashes the plain string and uses the salt from the hashed string. If both of the salted and hashed strings match, then the user successfully logs in and is shown the main menu of the
+program. The program additionally tracks who the current user is. Otherwise, the program informs the user that the password is incorrect.
 
 #### 1.1.2 Log Out
 
-In the main menu of the program, the user can click "log out" to log out of the program. When they do so, they are asked first, to confirm that they intend to logout. This is to prevent accidental log out, 
-and make the user enter their login credentials again. If the user clicks "Yes" in the log out confirm prompt, then they would log out and be shown the login menu. Otherwise, if the user clicks "No", then 
+In the main menu of the program, the user can click "log out" to log out of the program. When they do so, they are asked first to confirm that they intend to logout. This is to prevent accidental logout
+and make the user enter their login credentials again. If the user clicks "Yes" in the log-out confirm prompt, then they will log out and be shown the login menu. Otherwise, if the user clicks "No", then 
 they would be shown the attendance menu, and nothing happens.
 
 #### 1.1.3 Account Creation (Sign Up)
 
-A sign up system and feature was implemented for the login and log out feature because of three main reasons:
+A sign-up system and feature were implemented for the login and logout features because of three main reasons:
 
-1. The user wouldn't have an account unless they would manually make an account through a data storage
-2. Manually adding users would take significant time, especially because you need to consider how the data will be inputted (e.g, hashed passwords will need to be entered).
+1. The user wouldn't have an account unless they manually make an account through a data storage
+2. Manually adding users would take significant time, especially because you need to consider how the data will be input (e.g, hashed passwords will need to be entered).
 3. Manually adding users would not scale well with tens or hundreds of users.
 
-The sign up feature works by taking in what the user has entered when they entered an account name and an account password. First, the sign up system checks if the user has entered empty sign up credentials, 
-and informs the user about it if there are. Then, the program checks if the entered sign up credentials match the requirements stated in the log in menu.
+The sign-up feature works by taking in what the user has entered when they entered an account name and an account password. First, the sign-up system checks if the user has entered empty sign-up credentials, 
+and informs the user about it if there are. Then, the program checks if the entered sign-up credentials match the requirements stated in the login menu.
 
-Account Name: Only Letters and Spaces (Spaces by themself will not be accepted, as it can confuse users when the an non-named user submits attendance, and the submission in View Attendances shows their name 
-as whitspace)
+Account Name: Only Letters and Spaces (Spaces by themself will not be accepted, as it can confuse users when a non-named user submits attendance, and the submission in View Attendances shows their name 
+as whitespace)
 
 Password: At least 10 characters
 
-If the entered sign up details do not match the specifications, then the user is informed about it and is asked to change their sign up details. Otherwise, the sign up system accepts the account name, hashes
-and salts the entered account password through bcrypt, inserts the sign up credentials in the USERS table, and prompts the user that they successfully signed up.
+If the entered sign-up details do not match the specifications, then the user is informed about it and is asked to change their sign-up details. Otherwise, the sign-up system accepts the account name, hashes
+and salts the entered account password through bcrypt, inserts the sign-up credentials in the USERS table, and prompts the user that they successfully signed up.
 
-### 1.2 Attendance Features and System time Utilization for Attendance Punctuality
+### 1.2 Attendance Features and System Time Utilization for Attendance Punctuality
 
 #### 1.2.1 Create Attendance
-The create attendance feature is implemented to make attendances in the program and add additional parts such as attendance password and counterchecking question to help with the data integrity of the program. 
-First, the program asks the user to input the start/end date (MM-DD-YYYY), start/end time (24-hour format), attendance password, grace period (asks a number for minutes until considered late), and optional 
-countercheck question with answer (Via pop-up message). Then, the program takes in the create attendance info and checks if any of the conditions occur:
+The create attendance feature is implemented to make attendance in the program and add additional parts such as an attendance password and a counterchecking question to help with the data integrity of the program. 
+First, the program asks the user to input the start/end date (MM-DD-YYYY), start/end time (24-hour format), attendance password, grace period (asks for a number of minutes until considered late), and optional 
+countercheck question with answer (Via pop-up message). Then, the program takes in the created attendance info and checks if any of the conditions occur:
 - Start or End Date is not in the MM-DD-YYYY format
 - Start or End Time is not in 24-hour format
 - End Time is earlier than Start Time
-- Start Time is at the same time as End time
+- Start Time is at the same time as End Time
 - Either Start/End Date/Time is whitespace
 - Attendance Password is less than 10 characters
 - Grace period is either less than 0 minutes or is not a number
