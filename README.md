@@ -2,17 +2,17 @@
 # Project Title: Self-record Attendance System
 
 ## Project Description
-Our project is called the **Self-record Attendance System**. The main reason we chose this is because taking attendance still has a lot of problems. Manual attendance takes too much time since someone has to check everyone. On the other hand, the automated attendance in our campus (like the QR) is faster, but it still only works for one student at a time. This is a problem especially when there are a lot of students.
+Our project is called the **Self-record Attendance System**. The main reason we chose this is that taking attendance still has a lot of problems. Manual attendance takes too much time since someone has to check everyone. On the other hand, the automated attendance in our campus (like the QR) is faster, but it still only works for one student at a time. This is a problem, especially when there are a lot of students.
 
 With our project, we want to make an attendance system that can make things easier and faster. Students will be able to record their own attendance instead of depending on just one person or one scanner. At the same time, the system will have features to avoid cheating, so students can’t just “fake” their attendance.
 
-Some features we plan to add are a log in and log out system, attendance tracker creation/checking, time-based attendance checking, settings, and notifications. The program will also give messages when a user enters something wrong, so it’s clear and easy to use.
+Some features we plan to add are a login and logout system, attendance tracker creation/checking, time-based attendance checking, settings, and notifications. The program will also give messages when a user enters something wrong, so it’s clear and easy to use.
 
 Our main goals are:
 
 To allow students to record their own attendance.
 
-To make sure the system checks the inputs and outputs properly so there’s no dishonest recording.
+To make sure the system checks the inputs and outputs properly, so there’s no dishonest recording.
 
 Overall, this project will try to solve the problems of slow and unreliable attendance systems while making the process more fair and organized.
 
@@ -21,7 +21,7 @@ Overall, this project will try to solve the problems of slow and unreliable atte
 
 • (Creating, Viewing, or Filling out) Attendance
 
-• System time utulization for attendance punctuality 
+• System time utilization for attendance punctuality 
 
 • Settings feature
 
@@ -32,9 +32,9 @@ Overall, this project will try to solve the problems of slow and unreliable atte
   
   `python3 --version`
 
-The minimum python version that can be used to run the program is Python 3.7, but the recommended python version used for running the program is Python 3.9+.
+The minimum Python version that can be used to run the program is Python 3.7, but the recommended Python version used for running the program is Python 3.9+.
 
-If Python is not installed in in your program, or the current python version in the python program is older than Python 3.7, it is downloadable through `Python.org`.
+If Python is not installed in your program, or the current Python version in the Python program is older than Python 3.7, it is downloadable through `Python.org`.
 
 1B. Ensure that Tkinter and bcrypt are installed in your program. This can be checked by running the following code on a command prompt or terminal:
 
@@ -42,19 +42,19 @@ Command Prompt (cmd): `python -m tkinter` for Tkinter, and `pip show bcrypt` for
 
 Terminal: `python3 -m tkinter`for Tkinter, and `python3 -c "import bcrypt"` for bcrypt
 
-If either of the following libraries are missing, they can be downloaded via running the following lines on a command prompt or terminal:
+If either of the following libraries is missing, they can be downloaded by running the following lines on a command prompt or terminal:
 
 cmd: `pip install tkinter` for Tkinter and `pip install bcrypt` for bcrypt
 
 terminal: `brew install python-tk` for Tkinter and `pip3 install bcrypt` for bcrypt
 
-2. Download the file `Self-record Attendance.py`, or copy-paste the code from it and paste it onto a python file.
+2. Download the file `Self-record Attendance.py`, or copy-paste the code from it and paste it into a Python file.
 
 3. Open a terminal or command prompt.
 
-4. Run the program by pressing F5 or clicking 'Run' 
+4. Run the program by pressing F5 or clicking 'Run.' 
 
-5. Follow the on-screen instructions to enter log in authentication, options for attendance, etc.
+5. Follow the on-screen instructions to enter login authentication, options for attendance, etc.
 
 ## Example Output:
 Enter Account Name: _Gabriel Aaron L. Alve_
