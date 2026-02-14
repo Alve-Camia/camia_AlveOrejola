@@ -2,19 +2,19 @@
 # Project Title: Self-record Attendance System
 
 ## Project Description
-Our project is called the **Self-record Attendance System**. The main reason we chose this is that taking attendance still has a lot of problems. Manual attendance takes too much time since someone has to check everyone. On the other hand, the automated attendance in our campus (like the QR) is faster, but it still only works for one student at a time. This is a problem, especially when there are a lot of students.
+The following title is called the **Self-record Attendance System**, which aims to reflect the objectives and targets of the project. Manual attendance requires a significant amount of time to check students' attendance. On the other hand, the automated attendance in our campus (e.g., the QR) is systematic, but it only works for one student at a time. This is a problem, especially when there are a large number of students.
 
-With our project, we want to make an attendance system that can make things easier and faster. Students will be able to record their own attendance instead of depending on just one person or one scanner. At the same time, the system will have features to avoid cheating, so students can’t just “fake” their attendance.
+The proposed attendance system aims to develop an attendance platform that improves the efficiency of attendance recording. Students will be able to record their own attendance rather than a person or a scanner. At the same time, the system will have features to prevent dishonest or falsified attendance entries.
 
-Some features we plan to add are a login and logout system, attendance tracker creation/checking, time-based attendance checking, settings, and notifications. The program will also give messages when a user enters something wrong, so it’s clear and easy to use.
+Examples of features planned in the project are a login and logout system, attendance tracker creation/checking, time-based attendance checking, settings, and notifications. The program will additionally provide messages when a user has invalid inputs, which will assist the user in the UX (user experience) of the program
 
-Our main goals are:
+The main goals of the attendance system are to:
 
-To allow students to record their own attendance.
+• Allow students to record their own attendance, mainly in classes.
 
-To make sure the system checks the inputs and outputs properly, so there’s no dishonest recording.
+• To ensure that the system verifies the inputs and outputs properly, so there’s no dishonest recording.
 
-Overall, this project will try to solve the problems of slow and unreliable attendance systems while making the process more fair and organized.
+In short, the following proposed attendance platform plans to provide a transparent and efficient attendance system to address the current limitations of traditional and semi-automated attendance systems.
 
 ## Features
 • Login and Log Out feature
@@ -32,9 +32,9 @@ Overall, this project will try to solve the problems of slow and unreliable atte
   
   `python3 --version`
 
-The minimum Python version that can be used to run the program is Python 3.7, but the recommended Python version used for running the program is Python 3.9+.
+The minimum Python version possible to run the program is Python 3.7, but the recommended Python version used for running the program is Python 3.9+.
 
-If Python is not installed in your program, or the current Python version in the Python program is older than Python 3.7, it is downloadable through `Python.org`.
+If Python is not installed in your program, or the current Python version in the Python program is older than Python 3.7, it is downloadable from `Python.org`.
 
 1B. Ensure that Tkinter and bcrypt are installed in your program. This can be checked by running the following code on a command prompt or terminal:
 
@@ -90,7 +90,7 @@ Enter Attendance Checker Name: _2nd_October_ Week_Camia_
 
 Enter PIN/Password: _GoodMorn!ng,P1saYCamia_
 
-Attendance Successfully filled out.
+Attendance successfully filled out.
 
 Attendance Checker: 
 
@@ -105,8 +105,8 @@ Date - October 6, 2025, 7:18 AM
 Enter Decision: _3_
 
 Session ended. 
-If this is a mistake, type Y to go to log in. Otherwise, type anything else to leave: _N_
+If this was unintended, enter Y to proceed to the login. Otherwise, type anything else to leave: _N_
 
 ## Contributors
-- Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart, Log Out feature, Attendances Feature, System Time feature, Methodology)
-- Student 2: Claire L. Orejola (README, Login feature)
+- Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart, Updates in Code and Documentation)
+- Student 2: Claire L. Orejola (README, Initial Code of the Project)
