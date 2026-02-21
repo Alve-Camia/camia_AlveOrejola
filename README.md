@@ -2,7 +2,7 @@
 # Project Title: Self-record Attendance System
 
 ## Project Description
-The following title is called the **Self-record Attendance System**, which aims to reflect the objectives and targets of the project. Manual attendance requires a significant amount of time to check students' attendance. On the other hand, the automated attendance in our campus (e.g., the QR) is systematic, but it only works for one student at a time. This is a problem, especially when there are a large number of students.
+The following title is called the **Self-record Attendance System**, which aims to reflect the objectives and targets of the project. Manual attendance requires a significant amount of time to check students' attendance. On the other hand, the automated attendance in the campus (e.g., the QR) is systematic, but the QR terminals can handle only one student at a time. Multiple QR terminals may help, but the campus has hundereds of students. Thus, the amount of time accomodating the student's attendance is still significant.
 
 The proposed attendance system aims to develop an attendance platform that improves the efficiency of attendance recording. Students will be able to record their own attendance rather than a person or a scanner. At the same time, the system will have features to prevent dishonest or falsified attendance entries.
 
