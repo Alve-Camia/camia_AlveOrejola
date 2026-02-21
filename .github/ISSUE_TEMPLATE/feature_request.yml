@@ -1,0 +1,46 @@
+name: Feature Request
+description: Improve existing code structure, clarity, or performance
+title: "[Feature Request]: "
+labels: ["Enhancement"]
+
+body:
+  - type: textarea
+    id: statement
+    attributes:
+      label: Problem Statement
+      placeholder: Briefly discuss the problem statement (rationale) for the requested feature
+    validations:
+      required: true
+
+  - type: textarea
+    id: how
+    attributes:
+      label: Proposed Approach
+      placeholder: Propose a solution/s to implement the feature
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: outcome
+    attributes:
+      label: Type of update
+      options:
+        - label: Major Update
+        - label: Minor Update
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Files, modules, components, or code segments affected
+      placeholder: e.g., python_file.py, logout()
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional Context
+      placeholder: Enter any context or things to consider when implementing the feature
+    validations:
+      required: false
