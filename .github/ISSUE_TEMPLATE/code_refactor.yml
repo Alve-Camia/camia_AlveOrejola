@@ -1,0 +1,49 @@
+name: Refactor
+description: Improve existing code structure, clarity, or performance
+title: "[Refactor]: "
+labels: ["Code Refactor"]
+
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: What needs refactoring?
+      placeholder: Briefly describe the code or component that needs improvement
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: Why refactor it?
+      description: What is wrong with the current implementation?
+      placeholder: Hard to read? Too complex? Duplicated? Slow?
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      description: Files, modules, components, or code segments affected
+      placeholder: e.g., python_file.py, logout()
+    validations:
+      required: true
+
+  - type: textarea
+    id: plan
+    attributes:
+      label: Proposed change
+      placeholder: Describe how you plan to refactor it
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: outcome
+    attributes:
+      label: Expected outcome
+      options:
+        - label: Improve readability
+        - label: Reduce complexity
+        - label: Improve performance
+        - label: Prepare for new feature
