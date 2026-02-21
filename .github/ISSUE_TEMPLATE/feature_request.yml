@@ -1,5 +1,5 @@
 name: Feature Request
-description: Improve existing code structure, clarity, or performance
+description: Propose an idea/feature to implement in the code program
 title: "[Feature Request]: "
 labels: ["Enhancement"]
 
@@ -27,6 +27,8 @@ body:
       options:
         - label: Major Update
         - label: Minor Update
+    validations:
+      required: true
 
   - type: textarea
     id: scope
