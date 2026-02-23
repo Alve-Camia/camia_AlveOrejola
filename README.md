@@ -28,9 +28,10 @@ In short, the following proposed attendance platform plans to provide a transpar
 ## How to run the program
 1A. Ensure that Python is installed in your program. This can be done by running either of the following lines in your command prompt or terminal:
 
-  `python --version`
-  
-  `python3 --version`
+```
+python --version
+python3 --version
+```
 
 The minimum Python version possible to run the program is Python 3.7, but the recommended Python version used for running the program is Python 3.9+.
 
@@ -38,15 +39,31 @@ If Python is not installed in your program, or the current Python version in the
 
 1B. Ensure that Tkinter and bcrypt are installed in your program. This can be checked by running the following code on a command prompt or terminal:
 
-Command Prompt (cmd): `python -m tkinter` for Tkinter, and `pip show bcrypt` for bcrypt
+Command Prompt (Windows): 
+```
+python -m tkinter
+pip show bcrypt
+```  
 
-Terminal: `python3 -m tkinter`for Tkinter, and `python3 -c "import bcrypt"` for bcrypt
+Terminal (macOS / Linux): 
+```
+python3 -m tkinter
+python3 -c "import bcrypt"
+```
 
 If either of the following libraries is missing, they can be downloaded by running the following lines on a command prompt or terminal:
 
-cmd: `pip install tkinter` for Tkinter and `pip install bcrypt` for bcrypt
+Command Prompt (Windows): 
+```
+pip install tkinter
+pip install bcrypt
+``` 
 
-terminal: `brew install python-tk` for Tkinter and `pip3 install bcrypt` for bcrypt
+Terminal (macOS / Linux): 
+```
+brew install python-tk
+pip3 install bcrypt
+``` 
 
 2. Download the file `Self-record Attendance.py`, or copy-paste the code from it and paste it into a Python file.
 
@@ -57,55 +74,7 @@ terminal: `brew install python-tk` for Tkinter and `pip3 install bcrypt` for bcr
 5. Follow the on-screen instructions to enter login authentication, options for attendance, etc.
 
 ## Example Output:
-Enter Account Name: _Gabriel Aaron L. Alve_
-
-Enter Account Password: _Gaalve_
-
-Attendance Checker: 
-
-Date - October 6, 2025, 7:15 AM
-
-1 - Attendance Checker Options
-
-2 - Settings
-
-3 - Log Out
-
-Enter Decision: _1_
-
-
-Attendance Checker Options: 
-
-Date -  October 6, 2025, 7:15 AM
-
-1 - Create Attendance Checker
-
-2 - View Attendance Checker
-
-3 - Fill Out Attendance Checker
-
-Enter Decision: _3_
-
-Enter Attendance Checker Name: _2nd_October_ Week_Camia_
-
-Enter PIN/Password: _GoodMorn!ng,P1saYCamia_
-
-Attendance successfully filled out.
-
-Attendance Checker: 
-
-Date - October 6, 2025, 7:18 AM
-
-1 - Attendance Checker Options
-
-2 - Settings
-
-3 - Log Out
-
-Enter Decision: _3_
-
-Session ended. 
-If this was unintended, enter Y to proceed to the login. Otherwise, type anything else to leave: _N_
+<img width="700" height="471" alt="image" src="https://github.com/user-attachments/assets/b179f4db-8ee1-44ac-8012-ed3cf390275f" />
 
 ## Contributors
 - Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart, Updates in Code and Documentation)
