@@ -55,10 +55,6 @@ If the user did not enter their account password, the program would notify the u
 
 bcrypt.checkpw() is used because when the user signs up, their password is hashed and salted and stored in the USERS table.
 
-bcrypt.checkpw() works by taking in the following arguments as follows:
-
-bcrypt.checkpw(plain_string.encode(), hashed_string.encode())
-
 The bcrypt.checkpw() hashes the plain string and uses the salt from the hashed string. If both of the salted and hashed strings match, then the user successfully logs in and is shown the main menu of the
 program. The program additionally tracks who the current user is. Otherwise, the program informs the user that the password is incorrect.
 
@@ -92,6 +88,7 @@ and salts the entered account password through bcrypt, inserts the sign-up crede
 #### 1.2.1 Create Attendance
 The create attendance feature is implemented to make attendance in the program and add additional parts such as an attendance password and a counterchecking question to help with the data integrity of the program. 
 First, the program asks the user to input the start/end date (MM-DD-YYYY), start/end time (24-hour format), attendance password, grace period (asks for a specific number of minutes until considered late), and an optional countercheck question with an answer (Via pop-up message). Then, the program takes in the created attendance info and checks if any of the conditions occur:
+
 - Start or End Date is not in the MM-DD-YYYY format
 - Start or End Time is not in 24-hour format
 - End Time is earlier than Start Time
@@ -100,8 +97,10 @@ First, the program asks the user to input the start/end date (MM-DD-YYYY), start
 - Attendance Password is less than 10 characters
 - Grace period is either less than 0 minutes or is not a number
 - Empty countercheck question or answer
+
 If so, the program notifies the user about this through a pop-up. Otherwise, the program parses (converting raw text data into a usable format for the program) the dates via .striptime() and .combine(), hashes the attendance password, inserts the data into the ATTENDANCES table in the SQLite database, and gives the user a pop-up message saying that the attendance was made.
 Data stored in the ATTENDANCE table:
+
 - Attendance Name
 - Start Datetime
 - End Datetime
@@ -240,17 +239,16 @@ dragging the clock's hands. This feature introduces increased user-interaction c
 Manual date and time input has trade-offs, such as the absence of day-of-week information and less visual guidance during date selection. However, these trade-offs were accepted in the design choice
 because it simpliefies interaction and accessibility.
 ###  4.2 Single-file Architecture
-All parts and components of the code, such as application logic, user interface, and database connections, were coded inside one file. This decision was made to help with testing the code
-from start to finish by reducing the code's structural complexity. Additionally, it provides a traceable way to read the flow of the program. The single-file architecture additionally helps with
+All parts and components of the code, such as application logic, user interface, and database connections, were coded inside one file. The single-file architecture additionally helps with
 code sharing because the entire system is in a single file, and it does not require additional dependencies.
 
 The single-file architecture limits readability and maintainability. However, they were accepted in the design choice because their effects can be mitigated through using consistent coding conventions
-and by using the PEP (Python Enhancement Proposal) style guide to maintain readability.
+and to maintain readability.
 ###  4.3 Pop-up validation messages
 
-For informing the user of info, warnings, and questions, a pop-up validation message was used. First, it provides the user with immediate user feedback on whether there is an error, the results of the input, and more.
-Additionally, it reduces the confusion of why certain actions don't result in the expected outcome (error messages). Pop-up messages assist this by displaying the error to the user instead of appearing as a
-console message. Moreover, pop-up messages assist in the user experience of the program as the flow of the application is an event-driven GUI.
+For informing the user of info, warnings, and questions, a pop-up validation message was used. Pop-up messages assist in the user experience of the program as the flow of the application is an event-driven GUI.
+Additionally, it reduces the confusion of why certain actions don't result in the expected outcome (error messages). Pop-up messages assist this through displaying the error to the user instead of appearing as a
+console message.
 
 Pop-up validation messages have trade-offs, such as their sudden disruption, reducing focus, and repetitiveness for certain actions in the program. However, these trade-offs were accepted in the
 design choice because it provides user feedback on whether something went wrong, and it provides info in the case that their input results in an error, along with instructions on how to prevent it from constantly appearing.
