@@ -39,15 +39,17 @@ The Self-record Attendance System allow students to record their own attendance.
 
 • Notifications and user feedback for event-driven GUI
 
+---
 
 ## How to run the program
 1. **Check installation**:
 
 Windows (Command Prompt):
 ```
-python --version
+python --version 
 python -m tkinter
 pip show bcrypt
+pip show tkcalendar
 ```
 
 macOS / Linux (Terminal):
@@ -56,12 +58,26 @@ macOS / Linux (Terminal):
 python3 --version
 python3 -m tkinter
 python3 -c "import bcrypt"
+pip3 show tkcalendar
 ```
 
-Minimum: Python 3.7, 
-Recommended: Python 3.9+.
+Required Installations:
+
+• Python
+
+Minimum: Python 3.7, Recommended: Python 3.9+.
 
 Download: [Python.org](https://www.python.org).
+
+Additional Dependencies:
+
+• tkinter
+
+• bcrypt
+
+• tkCalendar
+
+---
 
 2. Install missing libraries (Skip if there are no missing libraries)
 > [!NOTE]
@@ -71,27 +87,38 @@ Command Prompt (Windows):
 ```
 pip install tkinter
 pip install bcrypt
+pip install tkcalendar
 ``` 
 
 macOS Terminal: 
 ```
 brew install python-tk
 pip3 install bcrypt
+pip3 install tkcalendar
 ```
 
 Linux Terminal:
-[Instllation Instructions for Tkinter and bcrypt](https://docs.google.com/document/d/17NBHcRPlcBNnfrOUJptSqRkywimTyfhTTs4cq2rRGXs/edit?usp=sharing)
+[Instllation Instructions for Tkinter, bcrypt, and tkcalendar](https://docs.google.com/document/d/17NBHcRPlcBNnfrOUJptSqRkywimTyfhTTs4cq2rRGXs/edit?usp=sharing)
 
-3. Download the file `Self-record Attendance.py`, or copy-paste the code from it and paste it into a Python file.
+---
 
-4. Open a terminal or command prompt.
+3. Download the zip file of this GitHub's repository. Ensure that you have extracted the file/s from the .zip (e.g, through WinRAR) 
+<img width="930" height="418" alt="image" src="https://github.com/user-attachments/assets/68c0cb73-8f24-4e0e-acb9-f9e0095f4956" />
 
-5. Run the program by pressing F5 or clicking 'Run.' 
+---
+
+4. Move the attendance_app folder outside the camia_AlveOrejola and onto the desktop directory.
+<img width="964" height="595" alt="image" src="https://github.com/user-attachments/assets/a9d65e22-2e12-4452-9afd-72ba892f0f37" />
+
+
+5. Open a command or terminal and type the following command. Ensure that the current directory your currently on is the desktop:
+
+`C:\Directory\Other Directory\Desktop>python -m attendance_app.main`
 
 6. Follow the on-screen instructions to enter login authentication, options for attendance, etc.
 
 ## Example Output:
-<img width="700" height="471" alt="image" src="https://github.com/user-attachments/assets/b179f4db-8ee1-44ac-8012-ed3cf390275f" />
+<img width="875" height="688" alt="image" src="https://github.com/user-attachments/assets/50f9e2f9-04d6-4da1-b1ac-58b26410d1d3" />
 
 ## Contributors
 - Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart, Updates in Code and Documentation)
