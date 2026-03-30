@@ -1,6 +1,102 @@
 # CHANGELOG 
 This file lists all updates made to the Self-record Attendance System project, specifically the updates in the project's code.
 ---
+## Version v0.4.0 - March 30, 2026
+
+<b>List of changes for Version 0.4.0<b/>
+<table>
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  <tr>
+    <td>Create Attendance</td>
+    <td>Only hashed counterchck answer if enabled</td>
+    <td>Hashing countercheck answers is unnecessary if the user does not intend to use it</td>
+  </tr>
+  <tr>
+    <td>Settings</td>
+    <td>Added a "Change Account Password" feature</td>
+    <td>A preventive/reactive feature in case of database data breach/comprimise</td>
+  </tr>
+  <tr>
+    <td>Project Code</td>
+    <td>Partially implemented code modularization to project code (e.g, db, auth_service, attendance_service, validators, constants)</td>
+    <td>To apply separation of concerns (SoC), a programming principle,make debugging easier to track, and make progress towards being able to implement automated testing </td>
+  </tr>
+  <tr>
+    <td>Logic Refactoring</td>
+    <td>Utilized Different Code Files for logic flow of attendance and user features</td>
+    <td>To apply SoC and DRY (Don't Repeat Yourself), and to make logic resuable</td>
+  </tr>
+  </tr>
+  <tr>
+    <td>Create Attendance</td>
+    <td>When countercheck is enabled, countercheck answer will now be hashed</td>
+    <td>To mitigate effects of database comprimise, specifically for countercheck</td>
+  </tr>
+  </tr>
+  <tr>
+    <td>Settings</td>
+    <td>Implemented Accessibility Features (First Pass), specifically high contrast mode and text resizing</td>
+    <td>To implement an inclusive design choice and improve usability</td>
+  </tr>
+  </tr>
+  <tr>
+    <td>User Interface (UI)</td>
+    <td>Switched to ttk, and applied ttk styles for UI appearance and settings</td>
+    <td>To have a cleaner UI system, and to polish project code UI</td>
+  </tr>
+  <tr>
+    <td>Create Attendance</td>
+    <td>Replaced entry box for date entries with calendar picker (Date entries still accepts manual typing of dates)</td>
+    <td>UX (User Experience) purposes, specifically to provide a visual calendar to select dates (for ease of date inputs)</td>
+  </tr>
+  <tr>
+    <td>Create Attendance</td>
+    <td>Added a spinbox (selection box) for grace period entry</td>
+    <td>UX Purposes, users can now use it for grace period entry</td>
+  </tr>
+  <tr>
+    <td>Create Attendance</td>
+    <td>Before making attendance, the code program asks first to confirm their action.</td>
+    <td>Acts as an option if user wants to make any changes first before making attendance. Additionally, it helps with preventing accidental, non-desired action</td>
+  </tr>
+  <tr>
+    <td>User Experience</td>
+    <td>Project Code asks user first a window close confirmation popup</td>
+    <td>Prevents accidentally closing the app</td>
+  </tr>
+  <tr>
+    <td>View Attendances</td>
+    <td>Creator Table and Participant Table now have scrollbars.</td>
+    <td>Acts as a UX addition for scrolling through tables in view attendances.</td>
+  </tr>
+  <tr>
+    <td>Project Code</td>
+    <td>Implemented helper functions (e.g, display_warning(), display_info(), yes_or_no())</td>
+    <td>To remove repeated messageboxes in code, and to apply code reusability.</td>
+  </tr>
+  <tr>
+    <td>Project Code</td>
+    <td>Implemented a generic widget loader for widgets</td>
+    <td>To apply DRY, specifically for avodiing repetitive .pack() loops</td>
+  </tr>
+  <tr>
+    <td>Session Handling</td>
+    <td>Replaced user session handling with python classes.</td>
+    <td>To remove global dependency for current user.</td>
+  </tr>
+  <tr>
+    <td>User Interface</td>
+    <td>Reduced Window size from 1200x1200 to 1200X680</td>
+    <td>To ensure that UI window does not take excessive space from the screen.</td>
+  </tr>
+</table>
+
+
+---
 ## Version v0.3.0 - February 4, 2026
 - 5th version of the code:
 - Added SQLite Database, specifically attendance.db to replace the text file storage
