@@ -1,44 +1,37 @@
 # camia_AlveOrejola
-# Project Title: Self-record Attendance System
-
+# Project Title: [To Be Reworked]
 ## Project Description
 ### Purpose
 
-The Self-record Attendance System allow students to record their own attendance. The systems aims to reduce time ane effort of manual/traditional and QR-based systems.
+The purpose of [To Be Reworked] is to [To Be Reworked]. The systems aims to reduce time ane effort of manual/traditional and QR-based systems.
 
-### Problems/Issues with curent systems/methods:
+### Problems/Issues with curent system/s:
 
-• Manual attendance: Time-consuming for checking attendance. Slow, labor-intensive, prone to errors in recording
+• Manual attendance: Time-consuming for checking attendance. Slow, labor-intensive, prone to errors in records.
 
-• QR-based systems: Terminals can handle one student at a time, making scaling difficult for hundreds of students.
+• QR-based Attendance: Can only handle one student per terminaal, resulting in possible scalability issues for hundreds of students.
 
 ### Proposed Solution
 
-• Students log attendance through code program
-
-• Attendance login requires attendance name, password, and possible countercheck questions.
-
-• Attendance is logged/timestamped to discourage falsification
+• [To Be Reworked]
 
 ### Goals
 
-• Allow students to record their own attendance, mainly in classes.
-
-• To ensure that the system verifies the inputs and outputs properly, so there’s no dishonest recording.
+• [To Be Reworked]
 
 • Provide a transparent and efficient attendance system to address the current limitations of traditional and semi-automated attendance systems.
 
-## Features
-• User Authentication (Login, Logout, Signup)
+## Features [Not Final - To Be Reworked]
 
-• Create, view, and fill attendance records
+• Sign up, Login, Logout feature (Account Authentication)
 
-• System time utilization for attendance punctuality 
+• Role-based system attendance (Teachers, Students, Admin)
 
-• Settings configurations
+• Attendance features: Create Attendance, Attendance Dashboard with summary report.
+ 
+• Data export of attendance records to CSV (Comma Separated Values)
 
-• Notifications and user feedback for event-driven GUI
-
+• Pop-up messages for user actions in connection with event-driven GUI
 ---
 
 ## How to run the program
