@@ -1,9 +1,13 @@
 # camia_AlveOrejola
-# Project Title: [To Be Reworked]
+# Project Title: APACE: Assistive Project Attendance Considering Efficiency
 ## Project Description
 ### Purpose
 
-The purpose of [To Be Reworked] is to [To Be Reworked]. The systems aims to reduce time ane effort of manual/traditional and QR-based systems.
+The purpose of APACE is to mainly be able to assist/help with the efficiency of the current attendance system methods observed in the campus. Specifically, the systems aims to reduce time ane effort of manual/traditional and QR-based systems.
+
+> [!NOTE]
+> The project's attendance system is neither intended to be a complete nor full replacement of the current attendance system of the campus. The attendance system is intented to be a supportive/assisstive tool in this said context.
+---
 
 ### Problems/Issues with curent system/s:
 
@@ -19,19 +23,23 @@ The purpose of [To Be Reworked] is to [To Be Reworked]. The systems aims to redu
 
 • [To Be Reworked]
 
-• Provide a transparent and efficient attendance system to address the current limitations of traditional and semi-automated attendance systems.
+• Provide a transparent and assistive attendance tool that may help with the current limitations of traditional and semi-automated attendance systems.
 
-## Features [Not Final - To Be Reworked]
+---
+
+## Features
 
 • Sign up, Login, Logout feature (Account Authentication)
 
 • Role-based system attendance (Teachers, Students, Admin)
 
 • Attendance features: Create Attendance, Attendance Dashboard with summary report.
- 
-• Data export of attendance records to CSV (Comma Separated Values)
 
+• Data export of attendance records to CSV (Comma Separated Values)
+ 
 • Pop-up messages for user actions in connection with event-driven GUI
+
+
 ---
 
 ## How to run the program
@@ -73,6 +81,7 @@ Additional Dependencies:
 ---
 
 2. Install missing libraries (Skip if there are no missing libraries)
+
 > [!NOTE]
 > In most cases, Tkinter is included in Python installation. However, many Linux distributions do not include Tkinter by default.
 
