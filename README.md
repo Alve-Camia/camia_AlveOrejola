@@ -17,7 +17,13 @@ The purpose of APACE is to mainly be able to assist/help with the efficiency of 
 
 ### Proposed Solution
 
-• [To Be Reworked]
+For teachers' point of view:
+
+• For handling class attendance, provide a tool for the teacher to record attendance digitally (By providing the list of students of the class and only ask for updates on punctuality for exceptions to "Present" status.)
+
+• Provide a summary report of the created attendance, including the subject and date, and how many were either present, tardy, cutting, or absent.
+
+• Allow exporting of attendance data.
 
 ### Goals
 
