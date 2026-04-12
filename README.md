@@ -21,13 +21,15 @@ For teachers' point of view:
 
 • For handling class attendance, provide a tool for the teacher to record attendance digitally (By providing the list of students of the class and only ask for updates on punctuality for exceptions to "Present" status.)
 
-• Provide a summary report of the created attendance, including the subject and date, and how many were either present, tardy, cutting, or absent.
+• Allow exporting of attendance data i to a CSV (Comma Separated Values) file, allowing ease of attendance records compiling.
 
-• Allow exporting of attendance data.
+For students' point of view:
+
+• Provide the students the list of their attendance records, which includes the date, subject, punctuality status, and cutting/tardy minutes (if applicable).
 
 ### Goals
 
-• [To Be Reworked]
+• Allow teachers to record attendance sessions through exception-based inputs for student punctuality.
 
 • Provide a transparent and assistive attendance tool that may help with the current limitations of traditional and semi-automated attendance systems.
 
@@ -39,12 +41,11 @@ For teachers' point of view:
 
 • Role-based system attendance (Teachers, Students, Admin)
 
-• Attendance features: Create Attendance, Attendance Dashboard with summary report.
+• Attendance features: Create Attendance, Attendance Dashboard.
 
 • Data export of attendance records to CSV (Comma Separated Values)
  
 • Pop-up messages for user actions in connection with event-driven GUI
-
 
 ---
 
