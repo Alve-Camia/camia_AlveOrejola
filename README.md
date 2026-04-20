@@ -1,43 +1,51 @@
 # camia_AlveOrejola
-# Project Title: Self-record Attendance System
-
+# Project Title: APACE: Assistive Project Attendance Considering Efficiency
 ## Project Description
 ### Purpose
 
-The Self-record Attendance System allow students to record their own attendance. The systems aims to reduce time ane effort of manual/traditional and QR-based systems.
+The purpose of APACE is mainly to assist/help with the efficiency of the current attendance system methods observed on the campus. Specifically, the system aims to reduce the time and effort of manual/traditional and QR-based systems.
 
-### Problems/Issues with curent systems/methods:
+> [!NOTE]
+The project's attendance system is neither intended to be a complete nor a full replacement for the campus's current attendance system. The attendance system is intended to be a supportive/assistive tool in this context.
+---
 
-• Manual attendance: Time-consuming for checking attendance. Slow, labor-intensive, prone to errors in recording
+### Problems/Issues with current system/s:
 
-• QR-based systems: Terminals can handle one student at a time, making scaling difficult for hundreds of students.
+• Manual attendance: Time-consuming for checking attendance. Slow, labor-intensive, prone to errors in records.
+
+• QR-based Attendance: Can only handle one student per terminal, resulting in possible scalability issues for hundreds of students.
 
 ### Proposed Solution
 
-• Students log attendance through code program
+From the teachers' point of view:
 
-• Attendance login requires attendance name, password, and possible countercheck questions.
+• For handling class attendance, provide a tool for the teacher to record attendance digitally (By providing the list of students of the class and only asking for updates on punctuality for exceptions to "Present" status)
 
-• Attendance is logged/timestamped to discourage falsification
+• Allow exporting of attendance data into a CSV (Comma Separated Values) file, allowing ease of attendance records compilation and data portability.
+
+From the students' point of view:
+
+• Provide the students with the list of their attendance records, which includes the date, subject, punctuality status, and cutting/tardy minutes (if applicable). This allows transparency of the students' attendance records.
 
 ### Goals
 
-• Allow students to record their own attendance, mainly in classes.
+• Allow teachers to record attendance sessions through exception-based inputs for student punctuality.
 
-• To ensure that the system verifies the inputs and outputs properly, so there’s no dishonest recording.
+• Provide a transparent and assistive attendance tool that may help with the current limitations of traditional and semi-automated attendance systems.
 
-• Provide a transparent and efficient attendance system to address the current limitations of traditional and semi-automated attendance systems.
+---
 
 ## Features
-• User Authentication (Login, Logout, Signup)
 
-• Create, view, and fill attendance records
+• Sign up, Login, Logout feature (Account Authentication)
 
-• System time utilization for attendance punctuality 
+• Role-based system attendance (Teachers, Students, Admin)
 
-• Settings configurations
+• Attendance features: Create Attendance, Attendance Dashboard.
 
-• Notifications and user feedback for event-driven GUI
+• Data export of attendance records to CSV (Comma Separated Values)
+ 
+• Pop-up messages for user actions in connection with event-driven GUI
 
 ---
 
@@ -50,6 +58,7 @@ python --version
 python -m tkinter
 pip show bcrypt
 pip show tkcalendar
+python -m pip install pandas
 ```
 
 macOS / Linux (Terminal):
@@ -59,13 +68,14 @@ python3 --version
 python3 -m tkinter
 python3 -c "import bcrypt"
 pip3 show tkcalendar
+python -m pip install pandas
 ```
 
 Required Installations:
 
 • Python
 
-Minimum: Python 3.7, Recommended: Python 3.9+.
+Minimum: Python 3.9, Recommended: Python 3.11/3.12.
 
 Download: [Python.org](https://www.python.org).
 
@@ -77,9 +87,11 @@ Additional Dependencies:
 
 • tkCalendar
 
+
 ---
 
 2. Install missing libraries (Skip if there are no missing libraries)
+
 > [!NOTE]
 > In most cases, Tkinter is included in Python installation. However, many Linux distributions do not include Tkinter by default.
 
@@ -88,21 +100,25 @@ Command Prompt (Windows):
 pip install tkinter
 pip install bcrypt
 pip install tkcalendar
+pip install pandas
 ``` 
 
 macOS Terminal: 
 ```
 brew install python-tk
 pip3 install bcrypt
-pip3 install tkcalendar
+pip3 install tkcalendar 
+pip3 install pandas
 ```
+> [!NOTE]
+> The last two lines can also work for the Linux Terminal.
 
 Linux Terminal:
-[Instllation Instructions for Tkinter, bcrypt, and tkcalendar](https://docs.google.com/document/d/17NBHcRPlcBNnfrOUJptSqRkywimTyfhTTs4cq2rRGXs/edit?usp=sharing)
+[Installation Instructions for Tkinter, bcrypt](https://docs.google.com/document/d/17NBHcRPlcBNnfrOUJptSqRkywimTyfhTTs4cq2rRGXs/edit?usp=sharing)
 
 ---
 
-3. Download the zip file of this GitHub's repository. Ensure that you have extracted the file/s from the .zip (e.g, through WinRAR) 
+3. Download the zip file of this GitHub repository. Ensure that you have extracted the file/s from the .zip (e.g, through WinRAR) 
 <img width="930" height="418" alt="image" src="https://github.com/user-attachments/assets/68c0cb73-8f24-4e0e-acb9-f9e0095f4956" />
 
 ---
@@ -111,14 +127,34 @@ Linux Terminal:
 <img width="964" height="595" alt="image" src="https://github.com/user-attachments/assets/a9d65e22-2e12-4452-9afd-72ba892f0f37" />
 
 
-5. Open a command or terminal and type the following command. Ensure that the current directory your currently on is the desktop:
+5. Open a command or terminal and type the following command. Ensure that the current directory you're in is the desktop:
 
 `C:\Directory\Other Directory\Desktop>python -m attendance_app.main`
 
 6. Follow the on-screen instructions to enter login authentication, options for attendance, etc.
 
 ## Example Output:
-<img width="875" height="688" alt="image" src="https://github.com/user-attachments/assets/50f9e2f9-04d6-4da1-b1ac-58b26410d1d3" />
+### Logged Out Menu:
+<img width="796" height="624" alt="image" src="https://github.com/user-attachments/assets/8445048b-a9e3-4b63-a2a6-f03e5c78bdc2" />
+
+### Login Page:
+<img width="782" height="678" alt="image" src="https://github.com/user-attachments/assets/b17be453-9111-49a5-9fbb-7bc2691a5494" />
+
+### Main Menu Page (Logged in):
+<img width="781" height="661" alt="image" src="https://github.com/user-attachments/assets/0baf5a57-f676-4a63-b80a-2c75b9332989" />
+
+### Attendance Dashboard:
+<img width="786" height="683" alt="image" src="https://github.com/user-attachments/assets/af69f718-a485-4795-9b3d-6a746e77b2d2" />
+
+### Attendance Marking Menu Example:
+<img width="804" height="700" alt="image" src="https://github.com/user-attachments/assets/533734d1-5289-4482-a134-d422ff7436a2" />
+
+### Attendance Export:
+<img width="794" height="701" alt="image" src="https://github.com/user-attachments/assets/eef2d312-1db6-477f-8ecb-299ed03a2f24" />
+
+### Logging Out:
+<img width="806" height="687" alt="image" src="https://github.com/user-attachments/assets/a8e45109-a8f2-4341-97e7-f06954645f8a" />
+
 
 ## Contributors
 - Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart, Updates in Code and Documentation)
