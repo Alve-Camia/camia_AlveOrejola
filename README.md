@@ -39,7 +39,7 @@ From the students' point of view:
 
 • Sign up, Login, Logout feature (Account Authentication)
 
-• Role-based system attendance (Teachers, Students, Admin)
+• Role-based system attendance (Teachers, Students)
 
 • Attendance features: Create Attendance, Attendance Dashboard.
 
