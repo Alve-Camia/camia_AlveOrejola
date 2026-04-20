@@ -127,14 +127,34 @@ Linux Terminal:
 <img width="964" height="595" alt="image" src="https://github.com/user-attachments/assets/a9d65e22-2e12-4452-9afd-72ba892f0f37" />
 
 
-5. Open a command or terminal and type the following command. Ensure that the current directory your currently on is the desktop:
+5. Open a command or terminal and type the following command. Ensure that the current directory you're in is the desktop:
 
 `C:\Directory\Other Directory\Desktop>python -m attendance_app.main`
 
 6. Follow the on-screen instructions to enter login authentication, options for attendance, etc.
 
 ## Example Output:
-<img width="875" height="688" alt="image" src="https://github.com/user-attachments/assets/50f9e2f9-04d6-4da1-b1ac-58b26410d1d3" />
+### Logged Out Menu:
+<img width="796" height="624" alt="image" src="https://github.com/user-attachments/assets/8445048b-a9e3-4b63-a2a6-f03e5c78bdc2" />
+
+### Login Page:
+<img width="782" height="678" alt="image" src="https://github.com/user-attachments/assets/b17be453-9111-49a5-9fbb-7bc2691a5494" />
+
+### Main Menu Page (Logged in):
+<img width="781" height="661" alt="image" src="https://github.com/user-attachments/assets/0baf5a57-f676-4a63-b80a-2c75b9332989" />
+
+### Attendance Dashboard:
+<img width="786" height="683" alt="image" src="https://github.com/user-attachments/assets/af69f718-a485-4795-9b3d-6a746e77b2d2" />
+
+### Attendance Marking Menu Example:
+<img width="804" height="700" alt="image" src="https://github.com/user-attachments/assets/533734d1-5289-4482-a134-d422ff7436a2" />
+
+### Attendance Export:
+<img width="794" height="701" alt="image" src="https://github.com/user-attachments/assets/eef2d312-1db6-477f-8ecb-299ed03a2f24" />
+
+### Logging Out:
+<img width="806" height="687" alt="image" src="https://github.com/user-attachments/assets/a8e45109-a8f2-4341-97e7-f06954645f8a" />
+
 
 ## Contributors
 - Student 1: Gabriel Aaron L. Alve (Draft Proposal, Flowchart, Updates in Code and Documentation)
