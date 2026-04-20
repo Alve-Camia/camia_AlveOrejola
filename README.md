@@ -3,29 +3,29 @@
 ## Project Description
 ### Purpose
 
-The purpose of APACE is to mainly be able to assist/help with the efficiency of the current attendance system methods observed in the campus. Specifically, the systems aims to reduce time ane effort of manual/traditional and QR-based systems.
+The purpose of APACE is mainly to assist/help with the efficiency of the current attendance system methods observed on the campus. Specifically, the system aims to reduce the time and effort of manual/traditional and QR-based systems.
 
 > [!NOTE]
-> The project's attendance system is neither intended to be a complete nor full replacement of the current attendance system of the campus. The attendance system is intented to be a supportive/assisstive tool in this said context.
+The project's attendance system is neither intended to be a complete nor a full replacement for the campus's current attendance system. The attendance system is intended to be a supportive/assistive tool in this context.
 ---
 
-### Problems/Issues with curent system/s:
+### Problems/Issues with current system/s:
 
 • Manual attendance: Time-consuming for checking attendance. Slow, labor-intensive, prone to errors in records.
 
-• QR-based Attendance: Can only handle one student per terminaal, resulting in possible scalability issues for hundreds of students.
+• QR-based Attendance: Can only handle one student per terminal, resulting in possible scalability issues for hundreds of students.
 
 ### Proposed Solution
 
-For teachers' point of view:
+From the teachers' point of view:
 
-• For handling class attendance, provide a tool for the teacher to record attendance digitally (By providing the list of students of the class and only ask for updates on punctuality for exceptions to "Present" status.)
+• For handling class attendance, provide a tool for the teacher to record attendance digitally (By providing the list of students of the class and only asking for updates on punctuality for exceptions to "Present" status)
 
-• Allow exporting of attendance data i to a CSV (Comma Separated Values) file, allowing ease of attendance records compiling.
+• Allow exporting of attendance data into a CSV (Comma Separated Values) file, allowing ease of attendance records compilation and data portability.
 
-For students' point of view:
+From the students' point of view:
 
-• Provide the students the list of their attendance records, which includes the date, subject, punctuality status, and cutting/tardy minutes (if applicable).
+• Provide the students with the list of their attendance records, which includes the date, subject, punctuality status, and cutting/tardy minutes (if applicable). This allows transparency of the students' attendance records.
 
 ### Goals
 
@@ -58,6 +58,7 @@ python --version
 python -m tkinter
 pip show bcrypt
 pip show tkcalendar
+python -m pip install pandas
 ```
 
 macOS / Linux (Terminal):
@@ -67,13 +68,14 @@ python3 --version
 python3 -m tkinter
 python3 -c "import bcrypt"
 pip3 show tkcalendar
+python -m pip install pandas
 ```
 
 Required Installations:
 
 • Python
 
-Minimum: Python 3.7, Recommended: Python 3.9+.
+Minimum: Python 3.9, Recommended: Python 3.11/3.12.
 
 Download: [Python.org](https://www.python.org).
 
@@ -84,6 +86,7 @@ Additional Dependencies:
 • bcrypt
 
 • tkCalendar
+
 
 ---
 
@@ -97,21 +100,25 @@ Command Prompt (Windows):
 pip install tkinter
 pip install bcrypt
 pip install tkcalendar
+pip install pandas
 ``` 
 
 macOS Terminal: 
 ```
 brew install python-tk
 pip3 install bcrypt
-pip3 install tkcalendar
+pip3 install tkcalendar 
+pip3 install pandas
 ```
+> [!NOTE]
+> The last two lines can also work for the Linux Terminal.
 
 Linux Terminal:
-[Instllation Instructions for Tkinter, bcrypt, and tkcalendar](https://docs.google.com/document/d/17NBHcRPlcBNnfrOUJptSqRkywimTyfhTTs4cq2rRGXs/edit?usp=sharing)
+[Installation Instructions for Tkinter, bcrypt](https://docs.google.com/document/d/17NBHcRPlcBNnfrOUJptSqRkywimTyfhTTs4cq2rRGXs/edit?usp=sharing)
 
 ---
 
-3. Download the zip file of this GitHub's repository. Ensure that you have extracted the file/s from the .zip (e.g, through WinRAR) 
+3. Download the zip file of this GitHub repository. Ensure that you have extracted the file/s from the .zip (e.g, through WinRAR) 
 <img width="930" height="418" alt="image" src="https://github.com/user-attachments/assets/68c0cb73-8f24-4e0e-acb9-f9e0095f4956" />
 
 ---
