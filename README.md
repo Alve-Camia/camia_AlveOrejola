@@ -47,6 +47,8 @@ From the students' point of view:
  
 • Pop-up messages for user actions in connection with event-driven GUI
 
+• Settings Feature (Accessibility and Attendance Settings)
+
 ---
 
 ## How to run the program
