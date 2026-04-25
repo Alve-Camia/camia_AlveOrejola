@@ -43,7 +43,7 @@ The project felt like a “head-first method of software development.” Its lon
   <tr>
     <td>Q4: Feedback Comments from Phase 1: Functionality Test during project check-in (for our case, it required an extensive revision on project implementation)</td>
     <td>Since the check-in was two weeks before the due date, it gave a time that was scarce for revising, especially since the check-in was during the moment when there were other projects outside of CS</td>
-    <td>To a breakdown of the steps needed to finish the revision, and write it down in a list. Then, split those tasks across the available days left. If possible, ask other group members to catch up with the current quarter requirements.</td>
+    <td>Do a breakdown of the steps needed to finish the revision, and write it down in a list. Then, split those tasks across the available days left. If possible, ask other group members to catch up with the current quarter requirements.</td>
   </tr>
 </table>
 
