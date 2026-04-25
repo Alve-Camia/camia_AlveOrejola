@@ -1,9 +1,102 @@
-# CHANGELOG 
-This file lists all updates made to the Self-record Attendance System project, specifically the updates in the project's code.
+# CHANGELOG
+> [!NOTE]
+> This file lists all updates made to the APACE (formerly the Self-record Attendance System), specifically updates in the project's code.
+
 ---
+## Version v0.5.0 - April 23, 2026
+
+### List of changes for Version 0.5.0
+
+#### Added
+<table>
+  
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  
+  <tr>
+    <td>User Authentication</td>
+    <td>Added account roles that will determine allowed, accessible app features</td>
+    <td>Prevent unauthorized access to certain app features. (e.g, Students should not be allowed to make an attendance)</td>
+  </tr>
+  
+  <tr>
+    <td>Unit Tests</td>
+    <td>Added unit tests to the attendance app, specifically for the validator's code file.</td>
+    <td>Helps check if any changes to code would result in bugs or errors, reducing the inefficiency of manual testing</td>
+  </tr>
+  
+  <tr>
+    <td>Attendance Data Export</td>
+    <td>Added a feature for exporting attendance data</td>
+    <td>To allow attendance data portability, and not make the data saved through the app limited to the database.</td>
+  </tr>
+  
+</table>
+
+#### Modified
+<table>
+  
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  
+  <tr>
+    <td>Database Schema</td>
+    <td>Modified the SQLite database schema to the following: student accounts, teacher accounts, attendance sessions, attendance records, login timestamps</td>
+    <td>Student and Teacher accounts were used to adapt to the account role features, and to make account querying more efficient, as combining both account types would result in some accounts having N/A data stored</td>
+  </tr>
+  
+  <tr>
+    <td>Attendance System</td>
+    <td>Modified the attendance such that it mainly utilizes exception-based teacher inputs</td>
+    <td><a href="https://github.com/Alve-Camia/camia_AlveOrejola/issues/16">Refer to the problem statement</a></td>
+  </tr>
+
+  <tr>
+    <td>Signup Page</td>
+    <td>Signup Page now requires name (first and surname), account role (Student, Teacher), and grade level and section (if the selected account role is teacher)</td>
+    <td>To help organize student account info, and help with attendance recording (so that names can be used instead of relying on usernames that can be potentially misleading)</td>
+  </tr>
+
+  
+</table>
+
+#### Deleted
+<table>
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  
+  <tr>
+    <td>Settings</td>
+    <td>Removed Personalization and Password Reset</td>
+    <td>
+      <li>Due to time constraints.</li>
+      <li>Personalization adds little value to the app, given that the project has an academic and/or professional context.</li>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>Attendance</td>
+    <td>Deleted Password-based attendance system</td>
+    <td><a href="https://github.com/Alve-Camia/camia_AlveOrejola/issues/16">Refer to the problem statement</a></td>
+  </tr>
+
+</table>
+
+---
+
 ## Version v0.4.0 - March 30, 2026
 
 <b>List of changes for Version 0.4.0<b/>
+
 <table>
   <tr>
     <th>Scope</th>
@@ -18,23 +111,23 @@ This file lists all updates made to the Self-record Attendance System project, s
   <tr>
     <td>Settings</td>
     <td>Added a "Change Account Password" feature</td>
-    <td>A preventive/reactive feature in case of database data breach/comprimise</td>
+    <td>A preventive/reactive feature in case of database data breach/compromise </td>
   </tr>
   <tr>
     <td>Project Code</td>
     <td>Partially implemented code modularization to project code (e.g, db, auth_service, attendance_service, validators, constants)</td>
-    <td>To apply separation of concerns (SoC), a programming principle,make debugging easier to track, and make progress towards being able to implement automated testing </td>
+    <td>To apply separation of concerns (SoC), a programming principle, make debugging easier to track, and make progress towards being able to implement automated testing </td>
   </tr>
   <tr>
     <td>Logic Refactoring</td>
     <td>Utilized Different Code Files for logic flow of attendance and user features</td>
-    <td>To apply SoC and DRY (Don't Repeat Yourself), and to make logic resuable</td>
+    <td>To apply SoC and DRY (Don't Repeat Yourself), and to make logic reusable </td>
   </tr>
   </tr>
   <tr>
     <td>Create Attendance</td>
     <td>When countercheck is enabled, countercheck answer will now be hashed</td>
-    <td>To mitigate effects of database comprimise, specifically for countercheck</td>
+    <td>To mitigate effects of database compromise, specifically for countercheck</td>
   </tr>
   </tr>
   <tr>
