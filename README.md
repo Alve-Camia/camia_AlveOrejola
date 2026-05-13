@@ -149,7 +149,7 @@ Linux Terminal:
 <img width="786" height="683" alt="image" src="https://github.com/user-attachments/assets/af69f718-a485-4795-9b3d-6a746e77b2d2" />
 
 ### Attendance Marking Menu Example:
-<img width="804" height="700" alt="image" src="https://github.com/user-attachments/assets/533734d1-5289-4482-a134-d422ff7436a2" />
+<img width="804" height="691" alt="image" src="https://github.com/user-attachments/assets/e85f875a-6b09-4cd2-be81-e0c6b1dc3ef4" />
 
 ### Attendance Export:
 <img width="794" height="701" alt="image" src="https://github.com/user-attachments/assets/eef2d312-1db6-477f-8ecb-299ed03a2f24" />
