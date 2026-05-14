@@ -5,7 +5,7 @@ labels: ["Bug"]
 
 body:
 - type: textarea
-    id:  bug_summary
+    id: bug_summary
     attributes:
       label: Bug Summary
       description: Describe clearly and concisely the bug.
