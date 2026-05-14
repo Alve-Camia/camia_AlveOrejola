@@ -1,0 +1,59 @@
+name: Bug Report
+description: Unexpected/Unintended Behavior 
+title: "[Bug Report]: "
+labels: ["Bug"]
+
+body:
+- type: textarea
+    id:  bug_summary
+    attributes:
+      label: Bug Summary
+      description: Describe clearly and concisely the bug.
+      placeholder: Tip: Include the what, where, and when of the bug.
+    validations:
+      required: true
+      
+  - type: textarea
+    id: bug_steps
+    attributes:
+      label: Bug Reproduction Steps
+      description: What are the steps needed to reproduce this bug?
+      placeholder: Tip: Include specific/detailed steps (e.g., specific button presses, navigations, certain user inputs). Please use a list format
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: Expected Result
+      description: What was the expected result of the action/interaction?
+      placeholder: Tip: Be specific about what the expected result was (based on logical usability, design requirements, etc.)
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_result
+    attributes:
+      label: Actual Result
+      description: Upon interaction/action, what was the experienced/actual result?
+      placeholder: Tip: Include in this section error messages or crash details.
+    validations:
+      required: true
+
+  - type: textarea
+    id: bug_evidence
+    attributes:
+      label: Additional Attachments/Evidence
+      description: Include any images or links about the bug
+      placeholder: Tip: This section is optional but recommended.
+    validations:
+      required: false
+
+  - type: textarea
+    id: reproducibility
+    attributes:
+      label: Bug Reproducibility
+      description: How often does this bug happen? Is it every time, or once in a while?
+      placeholder: Tip: Try reproducing the bug yourself (Recommended: 3-5 times) and see if it occurs consistently. If applicable, detail here any changes to the bug occurrence across different trials. 
+    validations:
+      required: false
