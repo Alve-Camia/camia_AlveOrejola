@@ -95,7 +95,8 @@
 
 ## Version v0.4.0 - March 30, 2026
 
-<b>List of changes for Version 0.4.0<b/>
+### List of changes for Version 0.4.0
+
 
 <table>
   <tr>
@@ -154,22 +155,22 @@
   <tr>
     <td>Create Attendance</td>
     <td>Before making attendance, the code program asks first to confirm their action.</td>
-    <td>Acts as an option if user wants to make any changes first before making attendance. Additionally, it helps with preventing accidental, non-desired action</td>
+    <td>Acts as an option if the user wants to make any changes first before making attendance. Additionally, it helps with preventing accidental, non-desired action</td>
   </tr>
   <tr>
     <td>User Experience</td>
-    <td>Project Code asks user first a window close confirmation popup</td>
+    <td>Project Code asks the user first for a window close confirmation popup</td>
     <td>Prevents accidentally closing the app</td>
   </tr>
   <tr>
     <td>View Attendances</td>
     <td>Creator Table and Participant Table now have scrollbars.</td>
-    <td>Acts as a UX addition for scrolling through tables in view attendances.</td>
+    <td>Acts as a UX addition for scrolling through tables in the view attendance.</td>
   </tr>
   <tr>
     <td>Project Code</td>
     <td>Implemented helper functions (e.g, display_warning(), display_info(), yes_or_no())</td>
-    <td>To remove repeated messageboxes in code, and to apply code reusability.</td>
+    <td>To remove repeated message boxes in code, and to apply code reusability.</td>
   </tr>
   <tr>
     <td>Project Code</td>
@@ -178,13 +179,13 @@
   </tr>
   <tr>
     <td>Session Handling</td>
-    <td>Replaced user session handling with python classes.</td>
-    <td>To remove global dependency for current user.</td>
+    <td>Replaced user session handling with Python classes.</td>
+    <td>To remove global dependency for the current user.</td>
   </tr>
   <tr>
     <td>User Interface</td>
     <td>Reduced Window size from 1200x1200 to 1200X680</td>
-    <td>To ensure that UI window does not take excessive space from the screen.</td>
+    <td>To ensure that the UI window does not take excessive space from the screen.</td>
   </tr>
 </table>
 
@@ -192,16 +193,16 @@
 ---
 ## Version v0.3.0 - February 4, 2026
 - 5th version of the code:
-- Added SQLite Database, specifically attendance.db to replace the text file storage
+- Added SQLite Database, specifically attendance.db, to replace the text file storage
 - Added the Create, Fill Out, and View attendances in the Attendance Menu
 - Added bcrypt hashing for attendance password
 - Added "Light Mode and Dark Mode" in Settings
-- Added a feature that tracks who is the current user in session
+- Added a feature that tracks who the current user is in the session
 - Modified attendance creation such that it has Start/End Date & Time Validation
 - Modified the password requirement on sign up (Password now requires 10 characters)
-- Modified where bcrypt hashed for user authentication are now stored (SQlite is now used instead of .txt files)
+- Modified where bcrypt hashed for user authentication are now stored (SQLite is now used instead of .txt files)
 - Modified Log Out wherein there is a confirmation prompt
-- Modified Error handling messages
+- Modified error-handling messages
 - Removed Demo Messages for attendance Buttons as it now has functionality
 - Removed use of text files for storing data
 ---
@@ -210,23 +211,23 @@
 - Changed how most of the widgets for each frame are called
 - Added Hashing and Salting for passwords when saved in users.txt
 - Changed the widget variable names in the code (FrameName_Description_WidgetType)
-- Added a settings menu and a menu for create attendance (They currently have a demo message)
+- Added a settings menu and a menu for creating attendance (They currently have a demo message)
 - Changed the use of comments in the code
 ---
 ## Version v0.1.1 - January 24, 2026
 - 3rd Version of the program
-- Modified how widgets are called in the code through using seperate frames for each part of the program
+- Modified how widgets are called in the code by using separate frames for each part of the program
 - Modified the clock in the menu so that it now updates every second
 ---
 ## Version v0.1.0 - January 22, 2026
 - 2nd Version of the program
-- Modified username restrictions, specifically usernames can now have spaces so long that there are at least letters in the username as well.
-- Added a log out button
-- Added a first version of the main menu of the program code. It currently has attendance button, log out button, and current time displayed (does not update yet)
-- Added an attendance button that leads to the options for attendance. As of now, they only print out a label saying "still in development"
+- Modified username restrictions, specifically, usernames can now have spaces so long that there are at least letters in the username as well.
+- Added a log-out button
+- Added a first version of the main menu of the program code. It currently has an attendance button, a log out button, and the current time displayed (does not update yet)
+- Added an attendance button that leads to the options for attendance. As of now, they only print out a label saying "still in development."
 ---
 ## Version v0.0.0 - January 20, 2026
 - First Version of the program
-- Currently the user can:
+- Currently, the user can:
   - Sign up for an account for the program (Has restrictions such as 8 characters for minimum password, no empty entered user and/or password, only letters for account name)
   - Log in using the account name and password entered during sign up (Displays a message in green when the user logs in and specifies what time
