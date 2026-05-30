@@ -3,7 +3,7 @@
 ## Project Description
 ### Purpose
 
-The purpose of APACE is mainly to assist/help with the efficiency of the current attendance system methods observed on the campus. Specifically, the system aims to reduce the time and effort of manual/traditional and QR-based systems.
+The purpose of APACE is mainly to improve the efficiency of the current attendance system methods observed on campus. Specifically, the system aims to reduce the time and effort of manual/traditional and QR-based systems.
 
 > [!NOTE]
 The project's attendance system is neither intended to be a complete nor a full replacement for the campus's current attendance system. The attendance system is intended to be a supportive/assistive tool in this context.
