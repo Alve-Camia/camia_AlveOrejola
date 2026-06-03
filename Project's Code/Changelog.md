@@ -1,6 +1,136 @@
 # CHANGELOG
+
 > [!NOTE]
 > This file lists all updates made to the APACE (formerly the Self-record Attendance System), specifically updates in the project's code.
+
+---
+## Version v0.5.1 - June 3, 2026
+
+### List of changes for Version 0.5.1
+
+> [!NOTE]
+> The following update details may be incomplete because of the large number of modifications and additions to the project code.
+
+
+### Added
+
+<table>  
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  
+  <tr>
+    <td>Functions depending on current session and attendance info</td>
+    <td>Added Dependency injection</td>
+    <td>To identify more efficiently whether a certain function requires/utilizes the current session or current attendance</td>
+  </tr>
+  
+  <tr>
+    <td>Unit Tests (Found in the test_validators.py)</td>
+    <td>
+      <ul>
+        <li>Added Edge Cases and Sad Paths for the attendance creation validator</li>
+        <li>Added Tests for the auth service and attendance service function validators</li>
+      </ul>
+    </td>
+    <td>
+      <ul>
+        <li>Reduces Technical Debt</li>
+        <li>Tests can check if modifcation/s to the tested code block will result in bugs/errors.</li>
+        <li>In case of failed tests, they can often pinpoint errors without needing to open the program</li>
+      </ul>
+    </td>
+
+
+  </tr>
+  <tr>
+    <td>Services Layer, Database layer, main.py, validators.py</td>
+    <td>Added type hints to functions</td>
+    <td>Documents what the expected function paramter/s' data types is/are</td>
+  </tr>
+
+  <tr>
+    <td>main.py</td>
+    <td>Added keyboard shortcuts to UI frames that have forms (i.e., Press enter when the selected entry, spinbox, or dropdown has focus, which is visually shown with a blue highlight).</td>
+    <td>
+      <ul>
+        <li>Keyboard Support Purposes (Accessibility)</li>
+        <li>Reduces the amount of dependency needed for using the mouse (UX)</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
+#### Modified
+<table>
+  
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  
+  <tr>
+    <td>main.py, auth_service, attendance_service</td>
+    <td>Switched the data type for storing error statuses from dictionary to dataclass instances</td>
+    <td>
+      <ul>
+        <li>When accessing the values from the error_response dictionary, you had to use strings, which can be prone to mistyping. </li>
+        <li>IDE Extension Autocompletion Support (IDEs or IDE Extensions can provide autocompletion for accessing an instance's attributes.)</li>
+      </ul>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>validators.py, attendance_service.py, auth_service.py, constants.py</td>
+    <td>Assigned error messages to variables, which were then moved to constants.py</td>
+    <td>
+      <ul>
+        <li>Prevents "Magic Strings"/"Hardcoding Strings"</li>
+      </ul>
+    </td>
+  </tr>
+
+  <tr>
+    <td>UI Pages</td>
+    <td>Further Centered UI Pages</td>
+    <td>
+      <ul>
+        <li>Makes the page have a focal point, and adds comfortable eye tracking of the UI pages</li>
+      </ul>
+    </td>
+  </tr>
+
+  
+</table>
+
+#### Deleted
+
+> [!NOTE]
+> From Student Coder: This will be temporarily empty until I can determine whether there were deleted portions of the code.
+<table>
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+
+</table>
+
 
 ---
 ## Version v0.5.0 - April 23, 2026
@@ -189,9 +319,8 @@
   </tr>
 </table>
 
-
 ---
-## Version v0.3.0 - February 4, 2026
+## Version v0.3.0 - February 4, 2026 
 - 5th version of the code:
 - Added SQLite Database, specifically attendance.db, to replace the text file storage
 - Added the Create, Fill Out, and View attendances in the Attendance Menu
@@ -206,7 +335,7 @@
 - Removed Demo Messages for attendance Buttons as it now has functionality
 - Removed use of text files for storing data
 ---
-## Version v0.2.0 - January 30, 2026
+## Version v0.2.0 - January 30, 2026 
 -  Version 4 of the program
 - Changed how most of the widgets for each frame are called
 - Added Hashing and Salting for passwords when saved in users.txt
@@ -219,7 +348,7 @@
 - Modified how widgets are called in the code by using separate frames for each part of the program
 - Modified the clock in the menu so that it now updates every second
 ---
-## Version v0.1.0 - January 22, 2026
+## Version v0.1.0 - January 22, 2026 
 - 2nd Version of the program
 - Modified username restrictions, specifically, usernames can now have spaces so long that there are at least letters in the username as well.
 - Added a log-out button
