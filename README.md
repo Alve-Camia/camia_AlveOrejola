@@ -11,43 +11,53 @@ The project's attendance system is neither intended to be a complete replacement
 
 ### Problems/Issues with current system/s:
 
-• Manual attendance: Time-consuming for checking attendance. Slow, labor-intensive, prone to errors in records.
-
-• QR-based Attendance: Can only handle one student per terminal, resulting in possible scalability issues for hundreds of students.
+<ul>
+    <li>Manual attendance: Time-consuming for checking attendance. Slow, labor-intensive, prone to errors in records.</li>
+    <li>QR-based Attendance: Can only handle one student per terminal, resulting in possible scalability issues for hundreds of students.</li>
+</ul>
 
 ### Proposed Solution
 
 From the teachers' point of view:
 
-• For handling class attendance, provide a tool for the teacher to record attendance digitally (By providing the list of students of the class and only asking for updates on punctuality for exceptions to "Present" status)
-
-• Allow exporting of attendance data into a CSV (Comma Separated Values) file, allowing ease of attendance records compilation and data portability.
+<ul>
+     <li>
+      For handling class attendance, provide a tool for the teacher to record attendance digitally (By providing the list of students in the class and only asking for updates on punctuality for exceptions to "Present" status)
+     </li>
+     <li>
+      Allow exporting of attendance data into a CSV (Comma Separated Values) file, allowing ease of attendance records compilation and data portability.
+     </li>
+</ul>
 
 From the students' point of view:
 
-• Provide the students with the list of their attendance records, which includes the date, subject, punctuality status, and cutting/tardy minutes (if applicable). This allows transparency of the students' attendance records.
+<ul>
+    <li>
+     Provide the students with the list of their attendance records, which includes the date, subject, punctuality status, and cutting/tardy minutes (if applicable). This allows transparency of the students' attendance records.
+    </li>
+</ul>
+
+
 
 ### Goals
 
-• Allow teachers to record attendance sessions through exception-based inputs for student punctuality.
-
-• Provide a transparent and assistive attendance tool that may help with the current limitations of traditional and semi-automated attendance systems.
+<ul>
+     <li>Allow teachers to record attendance sessions through exception-based inputs for student punctuality.</li>
+     <li>Provide a transparent and assistive attendance tool that may help with the current limitations of traditional and semi-automated attendance systems.</li>
+</ul>
 
 ---
 
 ## Features
 
-• Sign up, Login, Logout feature (Account Authentication)
-
-• Role-based system attendance (Teachers, Students)
-
-• Attendance features: Create Attendance, Attendance Dashboard.
-
-• Data export of attendance records to CSV (Comma Separated Values)
- 
-• Pop-up messages for user actions in connection with event-driven GUI
-
-• Settings Feature (Accessibility and Attendance Settings)
+<ul>
+    <li>Sign up, Login, Logout feature (Account Authentication)</li>
+    <li>Role-based system attendance (Teachers, Students)</li>
+    <li>Attendance features: Create Attendance, Attendance Dashboard.</li>
+    <li>Data export of attendance records to CSV (Comma Separated Values)</li>
+    <li>Pop-up messages for user actions in connection with event-driven GUI</li>
+    <li>Settings Feature (Accessibility and Attendance Settings)</li>
+</ul>
 
 ---
 
@@ -76,21 +86,26 @@ python -m pip install pandas
 
 Required Installations:
 
-• Python
+<ul>
+    <li>Python</li> 
+</ul>
+
 
 Minimum: Python 3.9, Recommended: Python 3.11/3.12.
+
+> [!NOTE]
+> In most cases, Tkinter is included in Python installation. However, many Linux distributions do not include Tkinter by default.
 
 Download: [Python.org](https://www.python.org).
 
 Additional Dependencies:
 
-• tkinter
-
-• bcrypt
-
-• tkCalendar
-
-• pandas
+<ul>
+    <li>tkinter</li>
+    <li>bcrypt</li>
+    <li>tkCalendar</li>
+    <li>pandas</li>
+</ul>
 
 > [!NOTE]
 > For this context, "pandas" refers to the open-source library. This is not meant to be confused with the animal.
@@ -98,9 +113,6 @@ Additional Dependencies:
 ---
 
 2. Install missing libraries (Skip if there are no missing libraries)
-
-> [!NOTE]
-> In most cases, Tkinter is included in Python installation. However, many Linux distributions do not include Tkinter by default.
 
 Command Prompt (Windows): 
 ```
@@ -117,7 +129,7 @@ pip3 install bcrypt
 pip3 install tkcalendar 
 pip3 install pandas
 ```
-> [!NOTE]
+> [!TIP]
 > The last two lines can also work for the Linux Terminal.
 
 Linux Terminal:
@@ -127,13 +139,13 @@ Linux Terminal:
 
 3. Download the zip file of this GitHub repository. Ensure that you have extracted the file/s from the .zip (e.g, through WinRAR)
 
-<img width="930" height="418" alt="image" src="https://github.com/user-attachments/assets/68c0cb73-8f24-4e0e-acb9-f9e0095f4956" />
+<img width="880" height="525" alt="image" src="https://github.com/user-attachments/assets/f14ac644-6547-4a7d-88fd-48b80887c4bc" />
 
 ---
 
 4. Move the attendance_app folder outside the camia_AlveOrejola and onto the desktop directory.
 
-<img width="964" height="595" alt="image" src="https://github.com/user-attachments/assets/a9d65e22-2e12-4452-9afd-72ba892f0f37" />
+<img width="987" height="505" alt="image" src="https://github.com/user-attachments/assets/7ba407a9-07ec-4393-8b0f-bedaad578b8f" />
 
 
 5. Please run the program based on your device's operating system. Ensure the folder attendance_app is on the desktop or in the desktop directory.
@@ -186,13 +198,17 @@ Run the following command from the parent directory containing the attendance_ap
 
 
 ## Example Output:
+
 ### Logged Out Menu:
+
 <img width="750" height="auto" alt="image" src="https://github.com/user-attachments/assets/ede59bad-b5c7-4b10-869b-14a0ad9a09f4" />
 
 ### Login Page:
+
 <img width="750" height="auto" alt="image" src="https://github.com/user-attachments/assets/b4e0d65d-de52-409d-aff8-9fa7c19ab02b" />
 
 ### Teacher's Main Menu Page (Logged in):
+
 <img width="750" height="auto" alt="image" src="https://github.com/user-attachments/assets/7fd57610-e79e-41da-8d35-adda07afa067" />
 
 ### Attendance Dashboard:
