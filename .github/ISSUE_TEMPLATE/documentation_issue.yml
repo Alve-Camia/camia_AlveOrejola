@@ -1,0 +1,58 @@
+name: Documentation Issue
+description: Report an issue in the project documentation
+title: "[Documentation ]: "
+labels: ["Documentation"]
+
+body:
+  - type: textarea
+    id: documentation_summary
+    attributes:
+      label: Documentation Issue Summary
+      description: Short description of the issue being reported
+      placeholder: "Tip: This section should not be lengthy. You may describe the specifics in the later portion."
+    validations:
+      required: true
+      
+  - type: checkboxes
+    id: documentation_issue_type
+    attributes:
+      label: Type of Documentation Issue
+      options:
+        - label: Typo/Grammar Error
+        - label: Incorrect Information
+        - label: Missing Information
+        - label: Outdated Information
+        - label: Unclear Explanation
+        - label: Broken Link
+        - label: Formatting Issue
+        - label: Missing Example
+        - label: Other
+    validations:
+      required: True
+      
+  - type: textarea
+    id: documentation_issue_description
+    attributes:
+      label: Problem Description
+      description: Problem Explanation about said documentation
+      placeholder: "Tip: Be specific/detailed about the issue."
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation_suggestion_improvement
+    attributes:
+      label: Suggested Improvement
+      description: How should the documentation be improved
+      placeholder: "Tip: It is heavily recommended to fill this portion, even though it is optional."
+    validations:
+      required: false
+
+  - type: textarea
+    id: bug_evidence
+    attributes:
+      label: documentation_additional_context
+      description: Considerations to be noted by contributors
+      placeholder: "Tip: If you can, include screenshots, references, links, or examples."
+    validations:
+      required: false
