@@ -49,9 +49,9 @@ body:
       required: false
 
   - type: textarea
-    id: bug_evidence
+    id: documentation_additional_context
     attributes:
-      label: documentation_additional_context
+      label: Documentation Additional Context
       description: Considerations to be noted by contributors
       placeholder: "Tip: If you can, include screenshots, references, links, or examples."
     validations:
