@@ -61,6 +61,25 @@
       </ul>
     </td>
   </tr>
+
+  <tr>
+    <td>main.py</td>
+    <td>Added a combobox constructor (helper function). Comboboxes are now created through this.</td>
+    <td>SoC (If the type of GUI changes, updating the helper function can give more progress for updating the comboboxes)</td>
+  </tr>
+
+  <tr>
+    <td>main.py</td>
+    <td>Added an `if __name__ == "__main__"`</td>
+    <td>Added so that the program cannot be run from a different code file outside of main.py.</td>
+  </tr>
+
+  <tr>
+    <td>main.py</td>
+    <td>Added a helper function that loads table data</td>
+    <td>Removing code duplication of inserting ttk.treeview rows based on fetched results from the storage</td>
+  </tr>
+  
 </table>
 
 #### Modified
@@ -94,6 +113,12 @@
   </tr>
 
   <tr>
+    <td>main.py, constants.py</td>
+    <td>Turned the variable, possible_grade_sections, into its own constant in constants.py</td>
+    <td>Removes variable definition duplication, and the variable will rarely change.</td>
+  </tr>
+
+  <tr>
     <td>UI Pages</td>
     <td>Further Centered UI Pages</td>
     <td>
@@ -103,13 +128,52 @@
     </td>
   </tr>
 
-  
+  <tr>
+    <td>main.py, attendance_service</td>
+    <td>Moved the attendance data export logic to the service layer.</td>
+    <td>SoC (If the export file type changes, only the service layer will be affected).</td>
+  </tr>
+
+  <tr>
+    <td>main.py (Helper Function)</td>
+    <td>Renamed the popup helper functions to include 'popup' in their name</td>
+    <td>It is now more explicit that it is a pop-up creator function.</td>
+  </tr>
+
+  <tr>
+    <td>main.py, constants.py</td>
+    <td>Moved window width and height values (of the program) into constants.py</td>
+    <td>Program UI width and height values are constants, so they were moved to constants.py</td>
+  </tr>
+
+  <tr>
+    <td>main.py, service layer</td>
+    <td>Moved the remaining business logic (for the attendance marking) in main.py to the service layer
+</td>
+    <td>SoC (Business logic should stay in service layer, in this case it was attendance_service, for organizing code)</td>
+  </tr>
+
+  <tr>
+    <td>main.py, constants.py</td>
+    <td>Assigned the "NORMAL" (the one that is used for button state) into its own constant and moved it to constants.py</td>
+    <td>Removes 'magic strings'</td>
+  </tr>
+
+  <tr>
+    <td>main.py (Attendance Marking)</td>
+    <td>Turned the process_punctuality_input function into two different functions</td>
+    <td>The original process_punctuality_input had a large if-else code block, so it was split into smaller portions</td>
+  </tr>
+
+  <tr>
+    <td>main.py</td>
+    <td>Turned the three text size adjustment functions into one generic text size function</td>
+    <td>Passing the font size multiplier directly to the font size adjuster would be more direct than using a function that will pass it themself (which was an extra step).</td>
+  </tr>
 </table>
 
 #### Deleted
 
-> [!NOTE]
-> From Student Coder: This will be temporarily empty until I can determine whether there were deleted portions of the code.
 <table>
   <tr>
     <th>Scope</th>
@@ -118,17 +182,33 @@
   </tr>
   
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>main.py</td>
+    <td>Removed the get_db() function</td>
+    <td>
+      <ul>
+        <li>get_db() ss already defined in db.py</li>
+        <li>Removing it improves SoC in case the DB will need to change (e.g., type, how its called)</li>
+      </ul>
+    </td>
   </tr>
   
   <tr>
-    <td></td>
-    <td></td>
-    <td></td>
+    <td>main.py</td>
+    <td>Removed the remaining v0.4.0 code</td>
+    <td>It is no longer being utilized (dead code).</td>
   </tr>
 
+  <tr>
+    <td>main.py (Theme / Appearance)</td>
+    <td>Removed the accent_bg parameter in def apply_theme</td>
+    <td>accent_bg is no longer being used, for now (dead code)</td>
+  </tr>
+
+  <tr>
+    <td>main.py</td>
+    <td>Removed direct DB calls in main.py</td>
+    <td>SoC (If the 'how' of calling the db changes, the storage layer is affected, not the main.py)</td>
+  </tr>
 </table>
 
 
