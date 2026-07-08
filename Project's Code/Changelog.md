@@ -4,13 +4,100 @@
 > This file lists all updates made to the APACE (formerly the Self-record Attendance System), specifically updates in the project's code.
 
 ---
+
+## Version v0.5.2 - July 8, 2026
+### List of changes for version 0.5.2
+
+### Added
+
+<table>
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  <tr>
+    <td>Attendance Export Feature</td>
+    <td>Attendance export files are now stored in a folder, 'Attendance Record Exports'</td>
+    <td>HHelps with organizing attendance exports</td>
+  </tr>
+  <tr>
+    <td>Source Code Documentation</td>
+    <td>Added type hints and docstrings to functions, classes, and methods</td>
+    <td>Acts as an overview for input/output value types and the purpose of the function, class, or method</td>
+  </tr>
+</table>
+
+### Modified
+
+<table>
+  <tr>
+    <th>Scope</th>
+    <th>Description</th>
+    <th>Reason/s</th>
+  </tr>
+  <tr>
+    <td>main.py</td>
+    <td>Converted class names, 'attendance_session' and 'account_session', to PascalCase</td>
+    <td>Following PEP 8 naming conventions</td>
+  </tr>
+  <tr>
+    <td>Attendance Marking</td>
+    <td>Tardy and cutting minute entries block inputs containing letters</td>
+    <td>Acts as a preventive measure in case users enter invalid tardy/cutting minutes</td>
+  </tr>
+  <tr>
+    <td>Attendance Marking</td>
+    <td>Used a darker color shade when a spinbox is disabled</td>
+    <td>Adds more contrast to the disabled spinboxes to their background. Previously, the default color for disabled spinboxes blended in well with the background.</td>
+  </tr>
+  <tr>
+    <td>UI</td>
+    <td>Centered Page Header Labels and increased their font size</td>
+    <td>UI Aesthetics (To show visual hierarchy)</td>
+  </tr>
+  <tr>
+    <td>Attendance Creation</td>
+    <td>Modified attendance session validation to consider Memorandum No. 012, s. 2026 - Energy Conservation Measures (Based on Memorandum, attendance sessions cannot be made during said asynchronous classes)</td>
+    <td>Input Validation</td>
+  </tr>
+  <tr>
+    <td>main.py</td>
+    <td>function 'menu_logout()' now accepts an AccountSession instance</td>
+    <td>Dependency Session (It is now clear that menu_logout utilizes an AccountSession)</td>
+  </tr>
+  <tr>
+    <td>Account Creation</td>
+    <td>Account creation form blocks potentially inappropriate names (given name, surname, and username)</td>
+    <td>For blocking nonsensical/inappropriate names</td>
+  </tr>
+  <tr>
+    <td>main.py</td>
+    <td>Removed trailing whitespaces and reduced lines over 100 characters</td>
+    <td>For following PEP 8 conventions</td>
+  </tr>
+  <tr>
+    <td>Attendance Marking</td>
+    <td>Tardy and cutting minutes block minutes 3 characters or more</td>
+    <td>50 minutes is the maximum amount of minutes (2 characters). Any more characters (3 or more) may be nonsensical.</td>
+  </tr>
+</table>
+
+
+### Deleted
+
+None
+
+#### Bugs Removed:
+
+<ul>
+  <li>Product Title, 'Attendance Checker', now changes font size in text size adjustment</li>
+  <li>Delete Attendances no longer produces a TypeError when confirming attendance deletions</li>
+</ul>
+
+---
 ## Version v0.5.1 - June 3, 2026
-
 ### List of changes for Version 0.5.1
-
-> [!NOTE]
-> The following update details may be incomplete because of the large number of modifications and additions to the project code.
-
 
 ### Added
 
