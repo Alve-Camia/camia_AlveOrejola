@@ -1,6 +1,6 @@
 """
 main.py
-This module is the main entry point of using the program.
+This module is the main entry point for using the program.
 Aside from that, it contains:
     - ttk widget style configurations
     - ttk frames and widgets
@@ -10,7 +10,7 @@ Additionally, it contains the frontend's request functions that are sent to the 
 """
 # =============== IMPORTANT ===============
 # Note: Please run the following program by inputting the following lines.
-# Ensure the attendance_app folder is at desktop directory / desktop screen.
+# Ensure the attendance_app folder is in the desktop directory/desktop screen.
 
 # For Windows:
 # 1. cd "C:\[Parent Directory]\[Other Parent Directory]\Desktop"
@@ -882,7 +882,7 @@ win = tk.Tk()
 db.init_db()
 components.apply_default_styles()
 
-win.title("APACE - v0.5.2 (In Development)")
+win.title("APACE - v0.5.2")
 
 screen_width = win.winfo_screenwidth()
 screen_height = win.winfo_screenheight()
